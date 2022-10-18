@@ -3,6 +3,7 @@ var link1 = document.getElementById("pg1link");
 var link2 = document.getElementById("pg2link");
 var link3 = document.getElementById("pg3link");
 var link4 = document.getElementById("pg4link");
+var link5 = document.getElementById("pg5link");
 
 var drop1 = document.getElementById("drop1"); 
 var drop2 = document.getElementById("drop2"); 
@@ -13,6 +14,15 @@ var drop6 = document.getElementById("drop6");
 var drop7 = document.getElementById("drop7"); 
 var drop8 = document.getElementById("drop8"); 
 var drop9 = document.getElementById("drop9"); 
+var drop10 = document.getElementById("drop10"); 
+var drop11 = document.getElementById("drop11"); 
+var drop12 = document.getElementById("drop12"); 
+var drop13 = document.getElementById("drop13"); 
+var drop14 = document.getElementById("drop14"); 
+var drop15 = document.getElementById("drop15"); 
+var drop16 = document.getElementById("drop16"); 
+var drop17 = document.getElementById("drop17"); 
+var drop18 = document.getElementById("drop18"); 
 
 let box1 = new box(drop1);
 let box2 = new box(drop2);
@@ -23,8 +33,19 @@ let box6 = new box(drop6);
 let box7 = new box(drop7);
 let box8 = new box(drop8);
 let box9 = new box(drop9);
+let box10 = new box(drop10);
+let box11 = new box(drop11);
+let box12 = new box(drop12);
+let box13 = new box(drop13);
+let box14 = new box(drop14);
+let box15 = new box(drop15);
+let box16 = new box(drop16);
+let box17 = new box(drop17);
+let box18 = new box(drop18);
 
-let boxlist = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
+let boxlist = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16, box17, box18 ];
+let pagelist = [link1, link2, link3, link4, link5];
+var currentpg;
 
 let timeoutover = true; //timeout for the scroll so ur computer doesn't crash
 function retimer(){
@@ -33,15 +54,7 @@ function retimer(){
 
 var menu = document.getElementById("menu");
 
-function menyu() {
-    if (menu.classList.contains("vis") == true){
-        menu.classList.replace("vis", "invis");
-    }else{
-        menu.classList.replace("invis", "vis");
-    } 
-}
-
-function mennu() {
+function mobilehidemenu() {
     if (window.innerWidth > 600){
         menu.classList = "vis"
     }else{
@@ -58,34 +71,51 @@ function highlightpage() {
         timeoutover = false;
         setTimeout(retimer, 100);
 
-        if (scrollY < window.innerHeight){
-            link1.classList.replace("current", "notcurrent");
-            link2.classList.replace("current", "notcurrent");
-            link3.classList.replace("current", "notcurrent");
-            link4.classList.replace("current", "notcurrent");
+        if (scrollY < window.innerHeight){ //top of the page nothing in the menu is highlighted
+            
+            for (i=0; i < pagelist.length; i++){
+                pagelist[i].classList.replace("current", "notcurrent");
+            }
 
-        } else if(scrollY > window.innerHeight && scrollY < window.innerHeight * 1.6){
-            link1.classList.replace("notcurrent", "current");
-            link2.classList.replace("current", "notcurrent");
-            link3.classList.replace("current", "notcurrent");
-            link4.classList.replace("current", "notcurrent");
+        } else if(scrollY > window.innerHeight && scrollY < window.innerHeight * 1.6){ //about page is at 1xviewport
 
-        }else if(scrollY > window.innerHeight * 1.6 && scrollY < window.innerHeight * 3){
-            link1.classList.replace("current", "notcurrent");
-            link2.classList.replace("notcurrent", "current");
-            link3.classList.replace("current", "notcurrent");
-            link4.classList.replace("current", "notcurrent");
+            for (i=0; i < pagelist.length; i++){
+                pagelist[i].classList.replace("current", "notcurrent");
+            }
 
-        }else if(scrollY > window.innerHeight * 3 && scrollY < window.innerHeight * 4){
-            link1.classList.replace("current", "notcurrent");
-            link2.classList.replace("current", "notcurrent");
-            link3.classList.replace("notcurrent", "current");
-            link4.classList.replace("current", "notcurrent");
-        }else{
-            link1.classList.replace("current", "notcurrent");
-            link2.classList.replace("current", "notcurrent");
-            link3.classList.replace("current", "notcurrent");
-            link4.classList.replace("notcurrent", "current");
+            pagelist[0].classList.replace("notcurrent", "current");
+
+        }else if(scrollY > window.innerHeight * 1.6 && scrollY < window.innerHeight * 2.6){ //recent page is at 1.6xviewport
+
+            for (i=0; i < pagelist.length; i++){
+                pagelist[i].classList.replace("current", "notcurrent");
+            }
+
+            pagelist[1].classList.replace("notcurrent", "current");
+
+        }else if(scrollY > window.innerHeight * 2.6 && scrollY < window.innerHeight * 4.6){ //art page is at 2.6xviewport
+
+            for (i=0; i < pagelist.length; i++){
+                pagelist[i].classList.replace("current", "notcurrent");
+            }
+
+            pagelist[2].classList.replace("notcurrent", "current");
+
+        }else if(scrollY > window.innerHeight * 4.6 && scrollY < document.body.scrollHeight - window.innerHeight * 1.1){ //insta page is at 4.6xviewport
+
+            for (i=0; i < pagelist.length; i++){
+                pagelist[i].classList.replace("current", "notcurrent");
+            }
+
+            pagelist[3].classList.replace("notcurrent", "current");
+
+        }else if(scrollY > document.body.scrollHeight - window.innerHeight * 1.1){ //contact page is 1.1 viewport up
+
+            for (i=0; i < pagelist.length; i++){
+                pagelist[i].classList.replace("current", "notcurrent");
+            }
+
+            pagelist[4].classList.replace("notcurrent", "current");
         }
     }
 }
