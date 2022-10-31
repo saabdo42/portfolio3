@@ -8,6 +8,20 @@ body{
     overflow-x: hidden;
 } 
 
+a{
+    color:#b2fe8a;
+    text-decoration: none;
+}
+
+a:hover{
+    color:tomato;
+    font-weight: bold;
+}
+
+a:active{
+    color: white;
+}
+
 ::selection{
     background-color: #b2fe8a;
 }
@@ -114,6 +128,10 @@ li a{
 
 li a:hover{
     font-weight: bold;
+}
+
+li a:visited{
+    color: unset;
 }
 
 li.current a{
@@ -304,7 +322,7 @@ h4{
     background-color: black;
     width:100vw;
     height:100vh;
-    z-index:3;
+    z-index:4;
     opacity: 75%;
     position:fixed;
 }
@@ -320,6 +338,13 @@ h4{
     justify-content: center;
     float:left;
     margin-right: 1%;
+}
+
+#bigimgrec{
+    object-fit:scale-down;
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto;
 }
 
 .recentmore img{
@@ -460,8 +485,8 @@ h4{
     float: left;
 }
 
-.juicer-about{
-    display: none !important;
+.juicer-feed h1.referral{
+    position:unset;
 }
 
 @media only screen and (max-width:600px) {

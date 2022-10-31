@@ -129,7 +129,7 @@ function cloze() {  //loop hide all descriptions
     document.getElementById("skrb").classList.replace("vis", "invis");
 }
 
-function bruh(id) {  //reveal description of the box u clicked on
+function opendesc(id) {  //reveal description of the box u clicked on
     boxlist[id].reveal();
     document.getElementById("back").classList.replace("invis", "vis");
     document.getElementById("next").classList.replace("invis", "vis");
@@ -137,68 +137,63 @@ function bruh(id) {  //reveal description of the box u clicked on
 }
 
 function nex(){
-    //loop check boxes to see which one isvisible
-    //remember which one isvisible
-    //hide that one
-    //make the NEXT box (in boxlist) visible
 
-    var stephanie = undefined //currently visible desc is stephanie
+    var currentvisdesc = undefined
 
-    for (j = 0; j <boxlist.length; j++) { //setting the value of stephanie lol
+    for (j = 0; j <boxlist.length; j++) { //checking which desc isvisible
         
         if (boxlist[j].isvisible() == true) {
-            stephanie = j;
+            currentvisdesc = j; //storing it
         }
     }
 
-    greg = stephanie - 1; //next desc is greg
+    nextvisdesc = currentvisdesc - 1; //setting next desc
 
-    if (greg < 0){ //on the last box, next box is the first box.....
-        greg = boxlist.length -1; 
+    if (nextvisdesc < 0){ //on the last desc, next desc is the first desc.....
+        nextvisdesc = boxlist.length -1; 
     }
 
-    boxlist[stephanie].hide();
-    boxlist[greg].reveal();
+    boxlist[currentvisdesc].hide(); //hide current and show next
+    boxlist[nextvisdesc].reveal();
 
-    var biggg = boxlist[greg].description.getElementsByClassName("bigimg");
-    var smol = boxlist[greg].description.getElementsByClassName("descimg");
+    var bigimgs = boxlist[nextvisdesc].description.getElementsByClassName("bigimg");
+    var thmnails = boxlist[nextvisdesc].description.getElementsByClassName("descimg");
 
-    biggg[0].src = smol[0].src
-
+    bigimgs[0].src = thmnails[0].src; //
 }
 
 function bac(){
-    var stephanie = undefined 
+    var currentvisdesc = undefined 
 
-    for (j = 0; j <boxlist.length; j++) { 
+    for (j = 0; j <boxlist.length; j++) { //checking which desc isvisible
         
         if (boxlist[j].isvisible() == true) {
-            stephanie = j;
+            currentvisdesc = j; //storing it
         }
     }
 
-    breg = stephanie + 1; 
+    nextvisdesc = currentvisdesc + 1; //setting previous desc
 
-    if (breg >= boxlist.length){ 
-        breg = 0; 
+    if (nextvisdesc >= boxlist.length){ //on the first desc, previous desc is the last desc.....
+        nextvisdesc = 0; 
     }
 
-    boxlist[stephanie].hide();
-    boxlist[breg].reveal();
+    boxlist[currentvisdesc].hide(); //hide current and show next
+    boxlist[nextvisdesc].reveal();
 
-    var biggg = boxlist[breg].description.getElementsByClassName("bigimg");
-    var smol = boxlist[breg].description.getElementsByClassName("descimg");
+    var bigimgs = boxlist[nextvisdesc].description.getElementsByClassName("bigimg");
+    var thmnails = boxlist[nextvisdesc].description.getElementsByClassName("descimg");
 
-    biggg[0].src = smol[0].src
+    bigimgs[0].src = thmnails[0].src;
 }
 
-function enlarge(frog) { //enlarges preview imgs
+function enlarge(frog) { //enlarges thumbnails
 
     var newimgsrc = frog.src;
     var bois = document.getElementsByClassName("bigimg");
     var pdfs = document.getElementsByClassName("window");
     
-    if (frog.classList.contains("oof") == true){ //if preview img is tagged as pdf
+    if (frog.classList.contains("pdfthm") == true){ //if thumbnail is tagged as pdf
 
         for (k=0; k<pdfs.length; k++) { //show all pdf windows
             pdfs[k].classList.replace("invis", "vis");
@@ -207,7 +202,7 @@ function enlarge(frog) { //enlarges preview imgs
             bois[j].classList.replace("vis", "invis");
         }
 
-    }else{ //if preview img is not tagged as pdf
+    }else{ //if thumbanil is not tagged as pdf
         
         for (h=0; h<pdfs.length; h++) { //hide all pdf windows
             pdfs[h].classList.replace("vis", "invis");
@@ -216,5 +211,25 @@ function enlarge(frog) { //enlarges preview imgs
             bois[k].classList.replace("invis", "vis");
             bois[k].src = newimgsrc; //choose which bigimg to show
         }
+    }
+}
+
+function enlargerec(thumbnail) { //enlarges thumbnails of recent section
+
+    var newimgsrc = thumbnail.src;
+    var recimg = document.getElementById("bigimgrec");
+    var recpdf = document.getElementById("windowrec");
+    
+    if (thumbnail.classList.contains("pdfthm") == true){ //if thumbnail is tagged as pdf
+
+        recpdf.classList.replace("invis", "vis"); //hides img and shows pdf
+        recimg.classList.replace("vis", "invis");
+
+    }else{ //if thumbnail is not tagged as pdf
+        
+        recpdf.classList.replace("vis", "invis"); //hides pdf and shows img
+        recimg.classList.replace("invis", "vis"); 
+
+        recimg.src = newimgsrc; //choose which bigimg to show
     }
 }
