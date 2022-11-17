@@ -12,12 +12,10 @@ a{
     color:#b2fe8a;
     text-decoration: none;
 }
-
 a:hover{
     color:tomato;
     font-weight: bold;
 }
-
 a:active{
     color: white;
 }
@@ -192,6 +190,11 @@ h6{ /*copyright*/
     box-sizing: border-box;
 }
 
+.artthm:hover{
+    opacity: 50%;
+    cursor:pointer;
+}
+
 /* DROPDOWNS */
 
 .close{
@@ -210,6 +213,7 @@ h6{ /*copyright*/
 
 .close:hover{
     color:tomato;
+    cursor: pointer;
 }
 
 #back, #next{
@@ -233,7 +237,8 @@ h6{ /*copyright*/
 }
 
 #back:hover, #next:hover{
-    color:#b2fe8a
+    color:#b2fe8a;
+    cursor: pointer;
 }
 
 .window{
