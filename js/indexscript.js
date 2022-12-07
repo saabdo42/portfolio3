@@ -101,7 +101,7 @@ function highlightpage() {
     }
 }
 
-function cloze() {  //loop hide all descriptions    
+function closedrop() {  //loop hide all descriptions    
     for (i = 0; i < droplist.length; i++) {
         hide(droplist[i]);
     }
@@ -135,7 +135,6 @@ function bac(){
     }
 
     nextvisdesc = currentvisdesc - 1; //setting previous desc
-
     if (nextvisdesc < 0){ //on the first desc, previous desc is the last desc.....
         nextvisdesc = droplist.length -1; 
     }
@@ -145,7 +144,15 @@ function bac(){
 
     var bigimgs = droplist[nextvisdesc].getElementsByClassName("bigimg");
     var thmnails = droplist[nextvisdesc].getElementsByClassName("descimg");
-    bigimgs[0].src = thmnails[0].src; //expanding the first thmnail
+
+    if (droplist[nextvisdesc].classList.contains("haspdf") == true) //if there's a pdf
+    {
+        reveal(droplist[nextvisdesc].querySelector(".window")); //show pdf not bigimg
+        hide(droplist[nextvisdesc].querySelector(".bigimg"))
+    } 
+    else{
+        bigimgs[0].src = thmnails[0].src; //otherwise expand the first thmnail
+    }
 }
 
 function nex(){
@@ -169,7 +176,15 @@ function nex(){
 
     var bigimgs = droplist[nextvisdesc].getElementsByClassName("bigimg");
     var thmnails = droplist[nextvisdesc].getElementsByClassName("descimg");
-    bigimgs[0].src = thmnails[0].src;
+    
+    if (droplist[nextvisdesc].classList.contains("haspdf") == true) //if there's a pdf
+    {
+        reveal(droplist[nextvisdesc].querySelector(".window")); //show pdf not bigimg
+        hide(droplist[nextvisdesc].querySelector(".bigimg"))
+    } 
+    else{
+        bigimgs[0].src = thmnails[0].src; //otherwise expand the first thmnail
+    }
 }
 
 function enlarge(frog) { //enlarges thumbnails
