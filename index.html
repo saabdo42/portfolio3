@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Sara's portfolio</title>
-        <link rel="stylesheet" href="css/indexstyle.css">
+        <link rel="stylesheet" href="indexstyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
@@ -20,9 +20,8 @@
         <div id="menu" class="invis"> 
             <ul>
                 <li id="pg1link" class="link notcurrent"> <a href="#aboutpage">About me</a> </li> 
-                <li id="pg2link" class="link notcurrent"> <a href="#recentpage">Recent</a> </li> 
                 <li id="pg3link" class="link notcurrent"> <a href="#workpage">Artwork</a> </li> 
-                <li id="pg4link" class="link notcurrent"> <a href="#instapage">Insta feed</a></li>
+                <!-- <li id="pg4link" class="link notcurrent"> <a href="#instapage">Insta feed</a></li> -->
                 <li id="pg5link" class="link notcurrent"> <a href="#contactpage">Contact me</a></li>
             </ul>
         </div>
@@ -33,15 +32,11 @@
 
         <div id="landing" >
             <h1>Sara Abdo</h1> 
+            <h4>Graphic Design</h4>
             <div id="dimmer"></div>
         </div>
 
         <div id="content"> 
-
-            <img src="images/auraexhibition.gif" class="invis">
-            <img src="images/riverdude.gif" class="invis">
-            <img src="images/underworlddude.gif" class="invis">
-            <img src="images/pyramid.gif" class="invis">
 
             <div id="aboutpage" class="page"></div>
             <h2>About me</h2>
@@ -49,36 +44,9 @@
             <img src="images/me3.jpg" id="meimg">
             <div id="medesc">
                 <p>Hi I'm Sara! <br>
-                    I'm a graphic design student at MTSU, graduating in 2024. I was born in Egypt & raised in Nashville. I want to focus my career on illustration and game development. I have experience in Illustrator, Photoshop, Indesign, Blender 3d, Unity, HTML, CSS, and JS. <br> 
-                    <img src="images/linkedinbadge.svg" class="badge" title="Adobe illustrator badge">
-                    <img src="images/unityessentialsbadge.png" class="badge" title="Unity essentials badge">
-                    <img src="images/juniorprogrammerbadge.png" class="badge" title="Junior programmer badge"><br>
-                    I am Adobe Illustrator certified on Linkedin Learning and I have earned the Unity Essentials and Junior Programmer badges on Unity Learn.<br>
+                    I'm a graphic design student at MTSU, graduating in 2024. I was born in Egypt & raised in Nashville. I want to focus my career on conceptual illustration and web design. I have experience in Illustrator, Photoshop, Indesign, HTML, CSS, and JS. I am self taught in many softwares and mediums, and I've earned the <b>Adobe Illustrator certification</b> on Linkedin Learning. <br>
+                    I have an <a href="https://www.instagram.com/kodishfish/">instagram</a> where i post things that are more illustration and less design. <br>
                     1 engineering major + 1 horrible semester = 1 art major with a strange transcript
-                </p>
-            </div>
-
-            <div id="recentpage" class="page"></div>
-            <h2>Recently</h2>
-
-            <div class="recentbig">
-                <img src="images/AAscreenshot2.png" id="bigimgrec">
-                <div id="windowrec" class="invis">
-                    <iframe src="images/bonk2.pdf#toolbar=0" class="pdf"></iframe>
-                </div>
-            </div>
-            <div class="recentmore">
-                <img src="images/AAscreenshot2.png" onmouseover="enlargerec(this)">
-                <img src="images/AAscreenshot3.png" onmouseover="enlargerec(this)">
-                <img src="images/AAsketch.png" onmouseover="enlargerec(this)">
-                <img src="images/putgamearthere.png" onmouseover="enlargerec(this)">
-            </div>
-            <div class="recentdesc">
-                <h3>Asteroid Avalanche</h3>
-                <p>October 2022<br>
-                    My first big Unity project! A game where you avoid doom for a little dino. You can play it 
-                    <a href="https://kodishfish.itch.io/asteroid-avalanche">here!</a> <br>
-                    I made the art, animation, music, sfx, and code.
                 </p>
             </div>
 
@@ -87,12 +55,17 @@
 
             <h3>Graphics</h3>
             <div class="artbox">
-                <img src="images/queen.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/azlthm.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/queenthm.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/raventhm.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/RR banner.png" class="artthm" onclick=opendesc(this)>            
+            </div>
+
+            <h3>Posters</h3>
+            <div class="artbox">
                 <img src="images/cinco amigos.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/lythm.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/sacd 2-01.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/RR banner.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/carrot mockup.png" class="artthm" onclick=opendesc(this)>
             </div>
 
@@ -103,18 +76,16 @@
                 <img src="images/bbthm.png" class="artthm" onclick=opendesc(this)>
             </div>
 
-            <h3>Traditional</h3>
+            <h3>Web Design</h3>
             <div class="artbox">
-                <img src="images/rendezvous.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/master study2.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/garden.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/manifestoscreenshot.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/pfthm.png" class="artthm" onclick=opendesc(this)>
             </div>
 
-            <h3>3d, motion, games, web</h3>
+            <h3>3d & motion </h3>
             <div class="artbox">
                 <img src="images/discovery.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/manifestoscreenshot.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/pijun.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/mona lise.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/WINGS.gif" class="artthm" onclick=opendesc(this)>
                 <img src="images/spain.gif" class="artthm" onclick=opendesc(this)>
                 <img src="images/pyramid.png" class="artthm" onclick=opendesc(this)>
@@ -122,10 +93,12 @@
 
             <h3>Miscellaneous</h3>
             <div class="artbox">
-                <img src="images/musroom.png" class="artthm" id="1" onclick=opendesc(this)>
-                <img src="images/k413.png" class="artthm" id="0" onclick=opendesc(this)>
+                <img src="images/musroom.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/k413.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/spooliesthm.png" class="artthm" onclick=opendesc(this)>
             </div>
 
+            <!-- 
             <div id="instapage" class="page"></div>
             <h2>@kodishfish</h2>
 
@@ -133,14 +106,34 @@
             <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
             <ul class="juicer-feed" data-feed-id="kodishfish" data-origin="embed-code"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1></ul>
 
+            -->
+
             <div id="contactpage" class="page"></div>
             <h2>Contact me</h2>
 
-            <p>Use this form or dm me on instagram @kodishfish</p>
             <div data-aidaform-widget="form-2019-12" data-url="https://sarafish.aidaform.com/free-basic-contact-form" data-width="100%" data-height="500px" data-do-resize></div><script>(function(){var r,d=document,gt=d.getElementById,cr=d.createElement,tg=d.getElementsByTagName,id="aidaform-embed";if(!gt.call(d,id)){r=cr.call(d,"script");r.id=id;r.src="https://embed.aidaform.com/embed.js";(d.head || tg.call(d,"head")[0]).appendChild(r);}})()</script>
-        </div> 
+            </div> 
+            
 
-                
+        <div class="drop invis">
+            <div class="close" onclick=closedrop()>&times;</div>
+            <div class="moreimg">
+                <img src="images/azlthm.png" class="descimg pdfthm" onmouseover="enlarge(this)">
+            </div>
+            <div class="bigimgholder">
+                <div class="window vis">
+                    <iframe src="images/azl.pdf#toolbar=0" class="pdf"></iframe>
+                </div>
+                <img src="images/lythm.png" class="bigimg invis">
+            </div>
+            <div class="desctext">
+                <h3>Azalea</h3>
+                <p>September 2021<br>
+                    A logo for an imaginary coffee shop in Dollywood. I took inspiration from the Smoky Mountains wildlife and experimented with a variable logo.
+                </p>
+            </div>
+        </div>
+
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
@@ -175,6 +168,27 @@
                 <h3>The Raven Cycle</h3>
                 <p>February 2022 <br>
                     A series of 4 book covers I made for Maggie Stiefvater's series <i>The Raven Cycle</i>. I felt like their current covers (shown in the last image) didn't properly convey the amazing storytelling and magical feeling of this series. I combined mystical and natural elements of the story in bold illustrations. Made in Photoshop and InDesign.
+                </p>
+            </div>
+        </div>
+
+        <div class="drop invis">
+            <div class="close" onclick=closedrop()>&times;</div>
+            <div class="moreimg">
+                <img src="images/RR banner.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/RR mar 29 meeting.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/RR welcome image.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/RJSS long.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/RJSS square.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/RJSS youtube.png" class="descimg" onmouseover="enlarge(this)">
+            </div>
+            <div class="bigimgholder">
+                <img src="images/RR banner.png" class="bigimg vis">
+            </div>
+            <div class="desctext">
+                <h3>Rural Reimagined</h3>
+                <p>Spring 2021<br>
+                    Event posters and screen graphics I made for Rural Reimagined club. Made in Photoshop.
                 </p>
             </div>
         </div>
@@ -230,27 +244,6 @@
                 <h3>SAC&D Shirt</h3>
                 <p>November 2020<br>
                     A shirt I designed for Tech's School of Art, Craft, & Design. I wanted to highlight every field of art and incorporate them into our golden eagle. Made in Illustrator.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/RR banner.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RR mar 29 meeting.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RR welcome image.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RJSS long.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RJSS square.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RJSS youtube.png" class="descimg" onmouseover="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/RR banner.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Rural Reimagined</h3>
-                <p>Spring 2021<br>
-                    Event posters and screen graphics I made for Rural Reimagined club. Made in Photoshop.
                 </p>
             </div>
         </div>
@@ -340,16 +333,19 @@
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
-                <img src="images/rendezvous.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/rendezvoussketch.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)">
             </div>
             <div class="bigimgholder">
-                <img src="images/rendezvous.png" class="bigimg vis">
+                <img src="images/manifestoscreenshot.png" class="bigimg vis">
             </div>
             <div class="desctext">
-                <h3>Rendezvous</h3>
-                <p>October 2021<br>
-                    A still life oil painting.
+                <h3>Design Manifesto</h3>
+                <p>December 2021<br>
+                    A website project where I had to represent my design process and "manifesto" in a website. This was my first time doing web design, so I did tons of research. I had to make a few compromises but managed to make a website I'm proud of. Made from scratch in VS code. <br>
+                    <a href="https://saabdo42.github.io/design-manifesto/">saabdo42.github.io/design-manifesto/</a><br>
+                    I recently updated it and cleaned the code a LOT with what I've learned about web design.
                 </p>
             </div>
         </div>
@@ -357,33 +353,15 @@
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
-                <img src="images/master study2.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/master study og.jpg" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/pfthm.png" class="descimg" onmouseover="enlarge(this)">
             </div>
             <div class="bigimgholder">
-                <img src="images/master study2.png" class="bigimg vis">
+                <img src="images/pfthm.png" class="bigimg vis">
             </div>
             <div class="desctext">
-                <h3>Angels</h3>
-                <p>October 2020<br>
-                    A charcoal and ink wash master study of an unknown artist's master drawing. I used a grid to get proportions right, and layered the charcoal until i got the right values. The first one is mine.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/garden.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/garden og.jpg" class="descimg" onmouseover="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/garden.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>The Garden of Earthly Delights</h3>
-                <p>September 2021<br>
-                    My first time using oil paint. A master study of a section of Hieronymous Bosch's <i>The Garden of Earthly Delights.</i> The first one is mine.
+                <h3>Design Manifesto</h3>
+                <p>December 2022<br>
+                    Yeah I made this website too. From scratch in VScode.
                 </p>
             </div>
         </div>
@@ -408,38 +386,16 @@
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
-                <img src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/mona lise.png" class="descimg" onmouseover="enlarge(this)">
             </div>
             <div class="bigimgholder">
-                <img src="images/manifestoscreenshot.png" class="bigimg vis">
+                <img src="images/mona lise.png" class="bigimg invis">
+                <div><iframe src="https://player.vimeo.com/video/750160996?h=7c8246c636" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
             </div>
             <div class="desctext">
-                <h3>Design Manifesto</h3>
-                <p>December 2021<br>
-                    A website project where I had to represent my design process and "manifesto" in a website. This was my first time doing web design, so I did tons of research. I had to make a few compromises but managed to make a website I'm proud of. Made from scratch in VS code. <br>
-                    <a href="https://saabdo42.github.io/design-manifesto/">saabdo42.github.io/design-manifesto/</a><br>
-                    I recently updated it and cleaned the code a LOT with what I've learned about web design.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/pijun.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/spritesheet1.jpg" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/spritesheet2.jpg" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/gameover.png" class="descimg" onmouseover="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/pijun.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Pijun</h3>
-                <p>April 2022<br>
-                    A pixel game I made on scratch.io, where you play as a pigeon in the city and collect as much food as you can before time runs out. You can play it <a href="https://scratch.mit.edu/projects/671738269/">here!</a> 
+                <h3>What?</h3>
+                <p>October 2022<br>
+                    A six word story I animated in After Effects.
                 </p>
             </div>
         </div>
@@ -542,6 +498,24 @@
             </div>
         </div>
 
-        <script src="js/indexscript.js"></script>
+        <div class="drop invis">
+            <div class="close" onclick=closedrop()>&times;</div>
+            <div class="moreimg">
+                <img src="images/spoolies 1.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/spoolies 2.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/spoolies 3.png" class="descimg" onmouseover="enlarge(this)">
+            </div>
+            <div class="bigimgholder">
+                <img src="images/spoolies 1.png" class="bigimg vis">
+            </div>
+            <div class="desctext">
+                <h3>Spoolies</h3>
+                <p>December 2022<br>
+                    A package design project. I took a piece of trash, a packing peanut, and gave it a new use and packaging. Made in Illustrator.
+                </p>
+            </div>
+        </div>
+
+        <script src="indexscript.js"></script>
     </body>
 </html>

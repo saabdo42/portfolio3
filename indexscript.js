@@ -66,7 +66,15 @@ function highlightpage() {
 
             linklist[0].classList.replace("notcurrent", "current");
 
-        }else if(scrollY > window.innerHeight * 1.6 && scrollY < window.innerHeight * 2.6){ //recent page is at 1.6xviewport
+        /*}else if(scrollY > window.innerHeight * 1.6 && scrollY < window.innerHeight * 2.6){ //recent page is at 1.6xviewport
+
+            for (i=0; i < linklist.length; i++){
+                linklist[i].classList.replace("current", "notcurrent");
+            }
+
+            linklist[1].classList.replace("notcurrent", "current");*/
+
+        }else if(scrollY > window.innerHeight * 1.6 && scrollY < document.body.scrollHeight - window.innerHeight * 1.2){ //art page is at 2.6xviewport
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
@@ -74,29 +82,21 @@ function highlightpage() {
 
             linklist[1].classList.replace("notcurrent", "current");
 
-        }else if(scrollY > window.innerHeight * 2.6 && scrollY < window.innerHeight * 4.6){ //art page is at 2.6xviewport
+        /*}else if(scrollY > window.innerHeight * 2.6 && scrollY < document.body.scrollHeight - window.innerHeight * 1.1){ //insta page is at 4.6xviewport
+
+            for (i=0; i < linklist.length; i++){
+                linklist[i].classList.replace("current", "notcurrent");
+            }
+
+            linklist[3].classList.replace("notcurrent", "current"); */
+
+        }else if(scrollY > document.body.scrollHeight - window.innerHeight * 1.2 ){ //contact page is 1.1 viewport up //document.body.scrollHeight - window.innerHeight * 1.1
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
 
             linklist[2].classList.replace("notcurrent", "current");
-
-        }else if(scrollY > window.innerHeight * 4.6 && scrollY < document.body.scrollHeight - window.innerHeight * 1.1){ //insta page is at 4.6xviewport
-
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
-            }
-
-            linklist[3].classList.replace("notcurrent", "current");
-
-        }else if(scrollY > document.body.scrollHeight - window.innerHeight * 1.1){ //contact page is 1.1 viewport up
-
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
-            }
-
-            linklist[4].classList.replace("notcurrent", "current");
         }
     }
 }
@@ -211,21 +211,5 @@ function enlarge(frog) { //enlarges thumbnails
             reveal(bois[k]);
             bois[k].src = newimgsrc; //choose which bigimg to show
         }
-    }
-}
-
-function enlargerec(thumbnail) { //enlarges thumbnails of recent section
-
-    var newimgsrc = thumbnail.src;
-    var recimg = document.getElementById("bigimgrec");
-    var recpdf = document.getElementById("windowrec");
-    
-    if (thumbnail.classList.contains("pdfthm") == true){ //if thumbnail is tagged as pdf
-        reveal(recpdf); //hides img and shows pdf
-        hide(recimg);
-    }else{
-        hide(recpdf); //hides pdf and shows img
-        reveal(recimg); 
-        recimg.src = newimgsrc; //choose which bigimg to show
     }
 }

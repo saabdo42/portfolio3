@@ -32,7 +32,7 @@ a:hover {
     color: tomato;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Supermercado One';
     color: white;
     z-index: 1;
@@ -50,6 +50,14 @@ h2{
     font-size: 4vw;
 }
 
+h4{
+    font-size: 2vw;
+    margin-top: 48vh;
+    margin-left: 11vw;
+    position: absolute;
+    -webkit-user-select: none; user-select: none;
+}
+
 #landing{
     width: 85vw;
     height:100vh;
@@ -58,7 +66,7 @@ h2{
     opacity: 100%;
     margin-left: 15vw;
     background-attachment: fixed;
-    background-image: url("../images/blug.png");
+    background-image: url("images/blug.png");
     background-size: cover;
 }
 
@@ -152,12 +160,11 @@ h6{ /*copyright*/
 
 #meimg{
     object-fit: cover;
-    height:32vh;
+    height:30vh;
     aspect-ratio: 1;
     float: left;
     border-radius: 50%;
-    margin:3vh;
-    margin-left: 0;
+    padding: 3vh;
     -webkit-user-select: none; user-select: none;
 }
 
@@ -171,6 +178,8 @@ h6{ /*copyright*/
 
 #medesc{
     display: flex;
+    height: 36vh;
+    align-items: center;
 }
 
 /*ART*/
@@ -259,13 +268,6 @@ h6{ /*copyright*/
     border:none;
 }
 
-h4{
-    font-size: 4vh;
-    font-family: 'Supermercado One';
-    color: #b2fe8a;
-    margin:0;
-}
-
 .drop{
     background-color: #222222;
     width:80vw;
@@ -330,53 +332,6 @@ h4{
     z-index:4;
     opacity: 75%;
     position:fixed;
-}
-
-/*recent*/
-
-.recentmore{
-    width: 10%;
-    height: 60vh;
-    box-sizing: border-box;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    float:left;
-    margin-right: 1%;
-}
-
-#bigimgrec{
-    object-fit:scale-down;
-    max-width: 100%;
-    max-height: 100%;
-    margin:auto;
-}
-
-.recentmore img{
-    object-fit: cover;
-    margin: 1vh;
-    max-height: 16%;
-    flex-grow: 1;
-}
-
-.recentbig{
-    width: 50%;
-    height: 60vh;
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column;
-    float:left;
-    margin-right: 1%;
-}
-
-.recentdesc{
-    width: 38%;
-    height: 60vh;
-    box-sizing: border-box;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 /*juice*/
@@ -527,25 +482,6 @@ h4{
         width:10vh;
         height:10vh;
         margin:1vh;
-    }
-    .recentbig{
-        width:100%;
-        height:50vh;
-        padding: unset; 
-        left:unset;
-    }
-    .recentmore{
-        width:100%;
-        height:10vh;
-        float:unset;
-        flex-direction: row;
-        padding: unset;
-    }
-    .recentdesc{
-        width: 100%;
-        padding: unset;
-        height:unset;
-        left:unset;
     }
     .artthm{
         max-width: 48%;
