@@ -2,18 +2,16 @@
 TODO:
 
 design pf:
-replace with links
-(insta, vimeo)
+add links (insta, vimeo)
 add spoolies layout?
 change posters to illus. & posters,
 move RR to etc,
 move books to illus. & posters
+(where to put azalea)
 
 art pf:
 make more env designs
 make more char designs
-make more 3d models
-add links
-(insta, itch)
+add links (insta, itch)
 
 maybe fix barcode on queen?
