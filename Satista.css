@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Satista';
+    src: url('fonts/Satista.eot');
+    src: url('fonts/Satista.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Satista.woff2') format('woff2'),
+         url('fonts/Satista.woff') format('woff'),
+         url('fonts/Satista.ttf')  format('truetype'),
+         url('fonts/Satista.svg#Satista') format('svg');
+}
