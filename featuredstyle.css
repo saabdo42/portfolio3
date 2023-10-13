@@ -1,0 +1,104 @@
+
+#landing{
+    height: 10vh;
+}
+
+#logo{
+    width: 8vw;
+    margin-top: 4vh;
+    margin-left: 0vw;
+    position: fixed;
+}
+
+h4, h3{
+    color: black;
+    margin-top: 15vh;
+    margin-left: 0vw;
+    position: fixed;
+    font-size: 1vw;
+}
+
+h3{
+    margin-top: 7vh;
+    margin-left: -2.5vh;
+    font-size: 2vw;
+}
+
+#overviewbox{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#overviewbox img{
+    object-fit: scale-down;
+    max-height: 30vh;
+}
+
+#processbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 2vh;
+}
+
+.text{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#processbox img{
+    max-width: 45%;
+    height: 40vh;
+    padding-right: 2vw;
+    object-fit: contain;
+}
+
+.small{
+    padding-left: 10vw;
+}
+
+.widep{
+    width: 100% !important;
+    height: unset !important;
+    text-align: center;
+    padding: 0 15vw;
+}
+
+.wideimgs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wideimgs img{
+    height: 30vh !important;
+    object-fit: scale-down;
+    max-width: 30%;
+    padding: 1vh !important;
+}
+
+.break{
+    height:0;
+    flex-basis: 100%;
+}
+
+.finalpdf{
+    width: 100%;
+    height: 60vh;
+}
+
+.finalpdf iframe{
+    width:100%;
+    height: 100%;
+}
+
+.backbutton{
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    padding-top: 8vh;
+}

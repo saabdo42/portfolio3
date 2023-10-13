@@ -2,6 +2,9 @@ var links = document.querySelectorAll(".link");
 var linklist = Array.from(links);
 var currentpg;
 
+var pages = document.querySelectorAll(".page");
+var pagelist = Array.from(pages);
+
 var menu = document.getElementById("menu");
 
 var backbutton = document.getElementById("back");
@@ -41,9 +44,11 @@ function mobilehidemenu() {
     }else{
         menu.classList = "invis"
     }
+
+    console.log( pagelist );
 }
 
-function highlightpage() {
+function highlightpage() { //highlights the menu link of what page ur scrolled to 
 
     if (timeoutover == false){
         return;
@@ -52,51 +57,38 @@ function highlightpage() {
         timeoutover = false;
         setTimeout(retimer, 100);
 
-        if (scrollY < window.innerHeight){ //top of the page nothing in the menu is highlighted
+        if (scrollY < pagelist[0].offsetTop ){ 
             
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
 
-        } else if(scrollY > window.innerHeight && scrollY < window.innerHeight * 1.6){ //about page is at 1xviewport
+        } else if( scrollY > pagelist[0].offsetTop && scrollY < pagelist[1].offsetTop ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
-
             linklist[0].classList.replace("notcurrent", "current");
 
-        /*}else if(scrollY > window.innerHeight * 1.6 && scrollY < window.innerHeight * 2.6){ //recent page is at 1.6xviewport
+        } else if( scrollY > pagelist[1].offsetTop && scrollY < pagelist[2].offsetTop ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
-
-            linklist[1].classList.replace("notcurrent", "current");*/
-
-        }else if(scrollY > window.innerHeight * 1.6 && scrollY < document.body.scrollHeight - window.innerHeight * 1.2){ //art page is at 2.6xviewport
-
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
-            }
-
             linklist[1].classList.replace("notcurrent", "current");
 
-        /*}else if(scrollY > window.innerHeight * 2.6 && scrollY < document.body.scrollHeight - window.innerHeight * 1.1){ //insta page is at 4.6xviewport
+        } else if( scrollY > pagelist[2].offsetTop && scrollY < pagelist[3].offsetTop ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
-
-            linklist[3].classList.replace("notcurrent", "current"); */
-
-        }else if(scrollY > document.body.scrollHeight - window.innerHeight * 1.2 ){ //contact page is 1.1 viewport up //document.body.scrollHeight - window.innerHeight * 1.1
-
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
-            }
-
             linklist[2].classList.replace("notcurrent", "current");
+
+        } else if ( scrollY > document.body.scrollHeight - window.innerHeight * 1.2){
+            for (i=0; i < linklist.length; i++){
+                linklist[i].classList.replace("current", "notcurrent");
+            }
+            linklist[3].classList.replace("notcurrent", "current");
         }
     }
 }

@@ -4,7 +4,9 @@
         <link rel="stylesheet" href="indexstyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/yjw4ecm.css">
+        <link rel="stylesheet" href="https://use.typekit.net/jyb1bcz.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -16,19 +18,19 @@
 
         <div id="menu" class="invis"> 
             <ul>
-                <li id="pg1link" class="link notcurrent"> <a href="#aboutpage">About me</a> </li> 
-                <li id="pg3link" class="link notcurrent"> <a href="#workpage">Artwork</a> </li> 
-                <!-- <li id="pg4link" class="link notcurrent"> <a href="#instapage">Insta feed</a></li> -->
-                <li id="pg5link" class="link notcurrent"> <a href="#contactpage">Contact me</a></li>
+                <li class="link notcurrent"> <a href="#aboutpage">About me</a> </li> 
+                <li class="link notcurrent"> <a href="#featuredpage">Case studies</a></li>
+                <li class="link notcurrent"> <a href="#workpage">Work</a> </li> 
+                <li class="link notcurrent"> <a href="#contactpage">Contact me</a></li>
             </ul>
         </div>
 
         <h6>
-            &copy; Sara Abdo 2022
+            &copy; Sara Abdo 2023
         </h6>        
 
         <div id="landing" >
-            <h1>Sara Abdo</h1> 
+            <img src="images/logogreen.png" id="logo"> 
             <h4>Graphic Design</h4>
             <div id="dimmer"></div>
         </div>
@@ -41,28 +43,37 @@
             <img src="images/me3.jpg" id="meimg">
             <div id="medesc">
                 <p>Hi I'm Sara! <br>
-                    I'm a graphic design student at MTSU, graduating in 2024. I was born in Egypt & raised in Nashville. I want to focus my career on conceptual illustration and web design. I have experience in Illustrator, Photoshop, Indesign, HTML, CSS, and JS. I am self taught in many softwares, and I've earned the <b>Adobe Illustrator</b> and <b>Adobe Indesign certification</b> on Linkedin Learning. <br>
+                    I'm a graphic design student at MTSU, graduating in 2024. I was born in Egypt & raised in Nashville. I want to focus my career on interactive design and design systems. I have experience in Illustrator, Photoshop, Indesign, HTML, CSS, and JS. I am self taught in many softwares, and I've earned the <b>Adobe Illustrator</b> and <b>Adobe Indesign certification</b> on Linkedin Learning. <br>
                     I have an <a href="https://www.instagram.com/kodishfish/">instagram</a> where i post things that are more illustration and less design. <br>
                     1 engineering major + 1 horrible semester = 1 art major with a strange transcript
                 </p>
             </div>
 
+            <div id="featuredpage" class="page"></div>
+            <h2>Case studies</h2>
+            <div class="featuredbox">
+                <div class="featuredthm">
+                    <a href="featured1.html">
+                        <img src="images/reassigned/thumbnail.png"> 
+                        <h1> ReAssigned </h1>
+                    </a>
+                </div>
+            </div>
+
             <div id="workpage" class="page"></div>
-            <h2>Artwork</h2>
+            <h2>Work</h2>
 
             <h3>Graphics</h3>
             <div class="artbox">
                 <img src="images/azlthm.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/queenthm.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/raventhm.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/RR banner.png" class="artthm" onclick=opendesc(this)>            
             </div>
 
             <h3>Posters</h3>
             <div class="artbox">
                 <img src="images/cinco amigos.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/lythm.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/sacd 2-01.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/carrot mockup.png" class="artthm" onclick=opendesc(this)>
             </div>
 
@@ -76,12 +87,10 @@
             <h3>Web Design</h3>
             <div class="artbox">
                 <img src="images/manifestoscreenshot.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/pfthm2.png" class="artthm" onclick=opendesc(this)>
             </div>
 
-            <h3>3d & motion </h3>
+            <h3>Motion </h3>
             <div class="artbox">
-                <img src="images/discovery.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/mona lise.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/WINGS.gif" class="artthm" onclick=opendesc(this)>
                 <img src="images/spain.gif" class="artthm" onclick=opendesc(this)>
@@ -90,8 +99,8 @@
 
             <h3>Miscellaneous</h3>
             <div class="artbox">
-                <img src="images/musroom.png" class="artthm" onclick=opendesc(this)>
-                <img src="images/k413.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/musroomspec2.png" class="artthm" onclick=opendesc(this)>
+                <img src="images/sacdupdate.png" class="artthm" onclick=opendesc(this)>
                 <img src="images/spooliesthm.png" class="artthm" onclick=opendesc(this)>
             </div>
 
@@ -172,27 +181,6 @@
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
-                <img src="images/RR banner.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RR mar 29 meeting.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RR welcome image.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RJSS long.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RJSS square.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/RJSS youtube.png" class="descimg" onmouseover="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/RR banner.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Rural Reimagined</h3>
-                <p>Spring 2021<br>
-                    Event posters and screen graphics I made for Rural Reimagined club. Made in Photoshop.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
                 <img src="images/cinco amigos.png" class="descimg" onmouseover="enlarge(this)">
                 <img src="images/CincodeMayoLogo.png" class="descimg" onmouseover="enlarge(this)">
             </div>
@@ -224,23 +212,6 @@
                 <h3>Speak yourself</h3>
                 <p>April 2021<br>
                     A series of posters I made for BTS's Speak Yourself tour. I learned more about design history and explored the differences between modernism and post-modernism. Made in Illustrator.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/sacd 2-01.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/scad sketch.jpg" class="descimg" onmouseover="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/sacd 2-01.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>SAC&D Shirt</h3>
-                <p>November 2020<br>
-                    A shirt I designed for Tech's School of Art, Craft, & Design. I wanted to highlight every field of art and incorporate them into our golden eagle. Made in Illustrator.
                 </p>
             </div>
         </div>
@@ -350,39 +321,6 @@
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
-                <img src="images/pfthm2.png" class="descimg" onmouseover="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/pfthm2.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Portfolio</h3>
-                <p>Always updating<br>
-                    I made this portfolio website from scratch in VSCode. 
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/discovery.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/discovery sketch.jpg" class="descimg" onmouseover="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/discovery.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Discovery</h3>
-                <p>March 2022<br>
-                    A scene I made using 3d modelling, texturing, rigging, camera work, and nodes in Blender.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
                 <img src="images/mona lise.png" class="descimg" onmouseover="enlarge(this)">
             </div>
             <div class="bigimgholder">
@@ -446,7 +384,7 @@
                 <img src="images/underworlddude.gif" class="descimg" onmouseover="enlarge(this)">
             </div>
             <div class="bigimgholder">
-                <img src="images/musroom.png" class="bigimg vis">
+                <img src="images/pyramid.png" class="bigimg vis">
             </div>
             <div class="desctext">
                 <h3>The Great Pyramid of Giza</h3>
@@ -459,12 +397,13 @@
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
-                <img src="images/musroom.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/musroomspec2.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/musroomspec1.png" class="descimg" onmouseover="enlarge(this)">
                 <img src="images/musroomgif.gif" class="descimg" onmouseover="enlarge(this)">
                 <img src="images/musroomsketch1.png" class="descimg" onmouseover="enlarge(this)">
             </div>
             <div class="bigimgholder">
-                <img src="images/musroom.png" class="bigimg vis">
+                <img src="images/musroomspec2.png" class="bigimg vis">
             </div>
             <div class="desctext">
                 <h3>Musroom</h3>
@@ -477,20 +416,17 @@
         <div class="drop invis">
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
-                <img src="images/k413.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/alto field guide.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/travis.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/K413 RENDER.png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/k413 (2).png" class="descimg" onmouseover="enlarge(this)">
-                <img src="images/blah.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/sacdupdate.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/sacdshirt.png" class="descimg" onmouseover="enlarge(this)">
+                <img src="images/scad sketch.jpg" class="descimg" onmouseover="enlarge(this)">
             </div>
             <div class="bigimgholder">
-                <img src="images/k413.png" class="bigimg vis">
+                <img src="images/sacdupdate.png" class="bigimg vis">
             </div>
             <div class="desctext">
-                <h3>5 constraints</h3>
-                <p>October 2020<br>
-                    A group project where we each gave each other 5 variations/constraints to remake a work of art. The digital painting was the original, and I found 5 creative ways to remake it.
+                <h3>SAC&D Shirt</h3>
+                <p>November 2020<br>
+                    A shirt I designed for Tech's School of Art, Craft, & Design. I wanted to highlight every field of art and incorporate them into our golden eagle. Made in Illustrator.
                 </p>
             </div>
         </div>
