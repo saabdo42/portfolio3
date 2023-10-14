@@ -102,3 +102,46 @@ h3{
     text-align: center;
     padding-top: 8vh;
 }
+
+@media only screen and (max-width:600px) {
+
+    #overviewbox{
+        height:35%;
+    }
+    #overviewbox img{
+        max-height: 10vh;
+    }
+    .importantimg{
+        flex-grow: 1;
+    }
+    .widep{
+        padding:0;
+    }
+    .text{
+        width: 100%;
+    }
+    #processbox img{
+        max-width: unset;
+        width: 100%;
+        height: unset;
+        padding-right: unset;
+    }
+    .wideimgs img{
+        max-height: 30vh;
+        height: unset !important;
+    }
+    h4{
+        font-size: 4vw;
+        color:white;
+        margin-top: 16vh;
+    }
+    h3{
+        margin-top:8vh;
+        color:white;
+        margin-left: -3vw;
+        font-size:9vw;
+    }
+    #logo{
+        width:42vw;
+    }
+}
