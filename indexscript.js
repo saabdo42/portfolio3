@@ -6,6 +6,7 @@ var pages = document.querySelectorAll(".page");
 var pagelist = Array.from(pages);
 
 var menu = document.getElementById("menu");
+var burg = document.getElementById("burger");
 
 var backbutton = document.getElementById("back");
 var nextbutton = document.getElementById("next");
@@ -43,9 +44,16 @@ function mobilehidemenu() {
         menu.classList = "vis"
     }else{
         menu.classList = "invis"
+        burg.classList = "vis"
     }
+}
 
-    console.log( pagelist );
+function burger() {
+    if (isvisible(menu) == true){
+        hide(menu)
+    }else{
+        reveal(menu)
+    } 
 }
 
 function highlightpage() { //highlights the menu link of what page ur scrolled to 

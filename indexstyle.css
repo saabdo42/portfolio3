@@ -62,7 +62,7 @@ h3{
 h4{
     font-size: 2vw;
     margin-top: 58vh;
-    margin-left: 5vw;
+    margin-left: 7vw;
     position: absolute;
     -webkit-user-select: none; user-select: none;
     color:white;
@@ -120,19 +120,15 @@ h4{
     -webkit-user-select: none; user-select: none;
 }
 
-.burger{
+#burger{
     display: none;
-    right:5vw;
-    width:10vw;
-    height:14vh;
-    position:absolute;
-    z-index: 15;
-}
-
-.burg{
-    width:10vw;
-    height:100%;
-    object-fit: contain;
+    right:8vw;
+    top:3vh;
+    width:12vw;
+    height:10vh;
+    position:fixed;
+    object-fit: scale-down;
+    z-index: 3;
 }
 
 ul{
@@ -409,18 +405,26 @@ h6{ /*copyright*/
         height: 100vh;
         margin-left: unset;
     }
+    #logo{
+        width: 70vw;
+        z-index: 2;
+    }
+    h4{
+        margin-top: 45vh;
+        font-size: 6vw;
+    }
     #content{
         width:100vw;
         margin:0;
         padding: 8vw;
     }
-    h6{
+    h6{ /*copyright*/
         width: 100%;
         text-align: center;
         margin-left: unset;
     }
     h2{
-        font-size: 4vh;
+        font-size: 6vh;
     }
     #meimg{
         float:unset;
@@ -431,19 +435,37 @@ h6{ /*copyright*/
         box-sizing: border-box;
 
     }
-    .badge{
-        width:10vh;
-        height:10vh;
-        margin:1vh;
+    #medesc{
+        height: unset;
+    }
+    #medesc img{
+        width: 10vw;
+        height: 10vh;
+    }
+    .spacer{
+        width:100%;
+        height: 3vh;
+    }
+    h1{ /*reassigned*/
+        font-size:6vw;
+    } 
+    .featuredthm{
+        width: 100%;
+        height: 22vh;
     }
     .artthm{
         max-width: 48%;
     }
     .drop{
-        width:100%; left:unset;
-        height:100%; top:unset;
+        width:100%; left:0;
+        height:100%; top:0;
         font-size:2vh;
+        z-index: 5;
     }    
+
+    .descimg{
+        max-height: unset;
+    }
     .bigimgholder{
         width:100%;
         height:50%;
@@ -483,7 +505,7 @@ h6{ /*copyright*/
     #menu{
         width:100%;
         height:100%;
-        position: absolute;
+        position: fixed;
         background-color: #222222;
         padding-left: 4%;
     }
@@ -501,18 +523,9 @@ h6{ /*copyright*/
     #current{
         box-sizing: border-box;
     }
-    .burger{
-        display:inline-block;
-    }
     #menu{
         display: none;
     }
-    h1{
-        font-size:17vw;
-        margin-top: 40vh;
-        margin-left: 5%;
-        display: inline-block;
-    }   
 }
 
 .vis{ display:block !important; }
