@@ -197,6 +197,7 @@ function enlarge(frog) { //enlarges thumbnails
 
         for (k=0; k<pdfs.length; k++) { //show all pdf windows
             reveal(pdfs[k]);
+            pdfs[k].src = newimgsrc;
         }
         for (j=0; j<bois.length; j++) { //hide all bigimg
             hide(bois[j]);
