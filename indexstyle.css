@@ -247,13 +247,24 @@ h6{ /*copyright*/
 
 /*ART*/
 
-.artbox{
+.artbox .brandbox{
     display:flex;
     flex-wrap: wrap;
     gap: 1vh;
     box-sizing: border-box;
     align-content: baseline;
     flex-grow: 1;
+}
+
+.brandbox{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.brandbox img{
+    width: 30vw;
+    max-height: unset !important;
 }
 
 .artthm{
