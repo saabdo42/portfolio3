@@ -464,8 +464,11 @@ h6{ /*copyright*/
         width: 100%;
         height: 22vh;
     }
+    .brandbox img{
+        width: unset;
+    }
     .artthm{
-        max-width: 48%;
+        max-width: 41vw;
     }
     .drop{
         width:100%; left:0;

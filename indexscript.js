@@ -56,6 +56,12 @@ function burger() {
     } 
 }
 
+function mobilemenuclick() { //hides the menu after clicking a link on mobile
+    if ( window.innerWidth < 600 ){
+        hide(menu);
+    }
+}
+
 function highlightpage() { //highlights the menu link of what page ur scrolled to 
 
     if (timeoutover == false){
