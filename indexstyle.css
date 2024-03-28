@@ -259,11 +259,12 @@ h6{ /*copyright*/
 .brandbox{
     display:flex;
     flex-wrap: wrap;
-    gap: 2vw;
 }
 
 .brandbox img{
-    width: 30vw;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1%;
     max-height: unset !important;
 }
 
@@ -409,6 +410,75 @@ h6{ /*copyright*/
     position:fixed;
 }
 
+/*JUICER*/
+
+.juicer-feed li{
+    height:unset !important;
+}
+
+.feed-item.juicer.juicer-about { 
+    height: 0 !important;
+    margin: 0 !important;
+}
+
+.juicer-feed li a {
+    display: unset;
+    font-size: unset;
+    height: unset;
+    padding-top: unset;
+}
+
+.j-message {
+    font-size: 1.5vh;
+    width: 80% !important;
+    height: 50%;
+}
+
+.j-message p{
+    margin: auto;
+    overflow: hidden;
+}
+
+.j-overlay{
+    padding-top: 15vh !important;
+}
+
+.j-overlay .j-overlay-content{
+    max-width: unset !important;
+    width: 60vw;
+    height: 70vh;
+}
+
+.j-post-overlay.juicer-feed .image{
+    width: 70vh;
+    max-width: unset !important;
+}
+
+.j-post-overlay.juicer-feed .j-overlay-text{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
+}
+
+.j-poster{
+    width: 100%;
+}
+
+.j-post-overlay.juicer-feed .j-overlay-text .j-message{
+    height: unset;
+}
+
+.j-overlay button{
+    background-size: 100% !important;
+    width: 1vw !important;
+    height: 1vw !important;
+}
+
+.j-gallery-arrow{
+    display: none !important;
+}
+
 @media only screen and (max-width:600px) {
 
     #landing{
@@ -464,8 +534,9 @@ h6{ /*copyright*/
         width: 100%;
         height: 22vh;
     }
-    .brandbox img{
-        width: unset;
+    .brandbox .artthm{
+        width: 100%;
+        max-width: unset;
     }
     .artthm{
         max-width: 41vw;
@@ -539,6 +610,28 @@ h6{ /*copyright*/
     }
     #menu{
         display: none;
+    }
+    .j-post-overlay.juicer-feed .image img{
+        max-width: 95vw;
+    }
+    .j-post-overlay.juicer-feed .j-overlay-text{
+        display: block;
+        width: 100%;
+        height:36%;
+        overflow: scroll !important;
+    }
+    .j-post-overlay.juicer-feed .j-overlay-text .j-message{
+        height: 10vh;
+        overflow: hidden;
+    }
+    .j-meta{
+        display: none;
+    }
+    .j-bottom{
+        margin: 0;
+    }
+    .j-overlay button{
+        display: none !important;
     }
 }
 
