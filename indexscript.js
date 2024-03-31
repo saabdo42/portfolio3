@@ -12,7 +12,7 @@ var backbutton = document.getElementById("back");
 var nextbutton = document.getElementById("next");
 var skrb = document.getElementById("skrb");
 
-var thms = document.querySelectorAll(".artthm");
+var thms = document.querySelectorAll(".artthmtitle");
 var thmlist = Array.from(thms);
 
 var drops = document.querySelectorAll(".drop");
@@ -91,14 +91,14 @@ function highlightpage() { //highlights the menu link of what page ur scrolled t
             }
             linklist[1].classList.replace("notcurrent", "current");
 
-        } else if( scrollY > pagelist[2].offsetTop && scrollY < pagelist[3].offsetTop ){
+        } else if( scrollY > pagelist[2].offsetTop && scrollY > document.body.scrollHeight - window.innerHeight * 2 ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
             linklist[2].classList.replace("notcurrent", "current");
 
-        } else if ( scrollY > document.body.scrollHeight - window.innerHeight * 1.2){
+        } else if ( scrollY > document.body.scrollHeight - window.innerHeight * 2){
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }

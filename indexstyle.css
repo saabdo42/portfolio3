@@ -14,6 +14,7 @@ body{
     margin:0;
     overflow-x: hidden;
     font-size:2.2vh;
+    box-sizing: border-box;
 } 
 
 a{
@@ -102,16 +103,16 @@ h4{
 }
 
 #content{
-    padding-left: 2vw; padding-right: 15vw;
+    padding-left: 2vw; padding-right: 18vw;
     box-sizing: border-box;
-    margin-left: 15vw;
+    margin-left: 14vw;
     padding-bottom: 10vh;
 }
 
 /* MENU */
 
 #menu{
-    width:15vw;
+    width:14vw;
     height:100%;
     padding-left: 2vw;
     box-sizing: border-box;
@@ -131,18 +132,18 @@ h4{
     z-index: 4;
 }
 
-ul{
+#menu ul{
     margin-top: 30vh;
     list-style-type: none;
     padding: 0;
 }
 
-li {
+#menu li {
     width: 100%;
     height: 8vh;
 }
 
-li a{
+#menu li a{
     text-decoration: none;
     display:block;
     font-size: 2.5vh;
@@ -151,7 +152,7 @@ li a{
     padding-top: 10%;
 }
 
-li a:hover{
+#menu li a:hover{
     font-weight: bold;
     color: var(--russet);
 }
@@ -162,7 +163,7 @@ li a:visited{
 }
 */
 
-li.current a{
+#menu li.current a{
     font-weight: bold;
     color: var(--blossom);
 }
@@ -182,13 +183,14 @@ h6{ /*copyright*/
 
 #meimg{
     object-fit: cover;
-    height:30vh;
+    height:36vh;
     aspect-ratio: 1;
     float: left;
     border-radius: 50%;
     padding: 3vh;
-    padding-left: 0vh;
     -webkit-user-select: none; user-select: none;
+    box-sizing: border-box;
+    margin-left: -3vh;
 }
 
 #medesc{
@@ -222,16 +224,13 @@ h6{ /*copyright*/
 .featuredbox{
     display:flex;
     gap: 1vh;
-    box-sizing: border-box;
     align-content: baseline;
     flex-grow: 1;
 }
 
 .featuredthm{
-    height: 30vh;
-    box-sizing: border-box;
     width: 22vw;
-    text-align: center;
+    position: relative;
 }
 
 .featuredthm img{
@@ -240,43 +239,76 @@ h6{ /*copyright*/
     height: 100%;
 }
 
-.featuredthm :hover{
-    opacity: 50%;
-    cursor:pointer;
-}
-
 /*ART*/
 
-.artbox .brandbox{
+.artbox, .brandbox{
     display:flex;
     flex-wrap: wrap;
-    gap: 1vh;
+    row-gap: 1vw;
     box-sizing: border-box;
     align-content: baseline;
-    flex-grow: 1;
+    padding: 0;
+    justify-content: space-between;
+    margin-top: 5vh;
 }
 
-.brandbox{
-    display:flex;
-    flex-wrap: wrap;
+.artbox{
+    gap:1vw;
 }
 
-.brandbox img{
-    width: 50%;
-    box-sizing: border-box;
-    padding: 1%;
+.brandbox li{
+    width: 32vw;
     max-height: unset !important;
+    list-style-type: none;
+    position: relative;
+}
+
+.artbox li{
+    height:30vh;
+    max-width: 50vh;
+    flex-grow:1;
+    list-style-type: none;
+    position: relative;
+}
+
+#pagebreak{
+    flex-grow: 10;
 }
 
 .artthm{
-    max-height: 20vh;
     object-fit: cover;
-    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: block;
+    transition: 0.5s;
 }
 
 .artthm:hover{
-    opacity: 50%;
-    cursor:pointer;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.artthmtitle, .featuredthmtitle{
+    user-select: none;
+    opacity: 0;
+    transition: .5s;
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    cursor: pointer;
+    text-align: center;
+}
+
+.artthmtitle:hover, .featuredthmtitle:hover{
+    opacity: .7;
+    font-weight: normal;
 }
 
 /* DROPDOWNS */
@@ -429,9 +461,9 @@ h6{ /*copyright*/
 }
 
 .j-message {
-    font-size: 1.5vh;
+    font-size: 2.2vh;
     width: 80% !important;
-    height: 50%;
+    height: 3vh;
 }
 
 .j-message p{
@@ -479,6 +511,14 @@ h6{ /*copyright*/
     display: none !important;
 }
 
+.juicer-feed.image-grid .j-text{
+    transition: opacity 0.5s !important;
+    color: white !important;
+    background-color: black !important;
+    font-family: "aesthet-nova";
+    opacity: .7 !important;
+}
+
 @media only screen and (max-width:600px) {
 
     #landing{
@@ -513,8 +553,6 @@ h6{ /*copyright*/
         width: 100%;
         height: unset;
         padding:5vh;
-        box-sizing: border-box;
-
     }
     #medesc{
         height: unset;
