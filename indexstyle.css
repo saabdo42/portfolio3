@@ -509,9 +509,11 @@ h6{ /*copyright*/
     height: 1vw !important;
 }
 
+/*
 .j-gallery-arrow{
     display: none !important;
 }
+*/
 
 .juicer-feed.image-grid .j-text{
     transition: opacity 0.5s !important;
