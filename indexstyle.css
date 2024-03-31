@@ -448,10 +448,12 @@ h6{ /*copyright*/
     height:unset !important;
 }
 
+/*
 .feed-item.juicer.juicer-about { 
     height: 0 !important;
     margin: 0 !important;
 }
+*/
 
 .juicer-feed li a {
     display: unset;
