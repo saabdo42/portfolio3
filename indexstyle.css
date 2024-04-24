@@ -10,10 +10,10 @@ html { scroll-behavior: smooth; }
 body{
     background-color: white;
     color: black;
-    font-family: "aesthet-nova";
+    font-family: "capriola";
     margin:0;
     overflow-x: hidden;
-    font-size:2.2vh;
+    font-size:2vh;
     box-sizing: border-box;
 } 
 
@@ -22,7 +22,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    font-weight: bold;
+    font-weight: bolder;
 }
 a:active{
     color: var(--russet );
@@ -37,21 +37,13 @@ a:active{
 }
 
 h1, h2, h3, h4 {
-    font-family: "aesthet-nova";
-    font-weight: 900;
+    font-weight: bolder;
     color: black;
     z-index: 1;
-    letter-spacing: .05em;
-}
-
-h1{
-    font-size:1.5vw;
-    margin-top: 0vh;
-    -webkit-user-select: none; user-select: none;
 }
 
 h2{
-    font-size: 3.5vw;
+    font-size: 3.2vw;
     margin: 2vw 0;
 }
 
@@ -63,7 +55,7 @@ h3{
 h4{
     font-size: 2vw;
     margin-top: 58vh;
-    margin-left: 7vw;
+    margin-left: 6vw;
     position: absolute;
     -webkit-user-select: none; user-select: none;
     color:white;
@@ -146,14 +138,14 @@ h4{
 #menu li a{
     text-decoration: none;
     display:block;
-    font-size: 2.5vh;
+    font-size: 2.2vh;
     height:70%;
     position: relative;
     padding-top: 10%;
 }
 
 #menu li a:hover{
-    font-weight: bold;
+    font-weight: bolder;
     color: var(--russet);
 }
 
@@ -164,13 +156,12 @@ li a:visited{
 */
 
 #menu li.current a{
-    font-weight: bold;
+    font-weight: bolder;
     color: var(--blossom);
 }
 
 h6{ /*copyright*/
     font-size: 2.5vh;
-    font-weight: normal;
     color: var(--sky );
     position: fixed;
     bottom: 2vh;
@@ -216,6 +207,14 @@ h6{ /*copyright*/
     color: var(--sprout)
 }
 
+#linx{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+}
+
 .spacer{
     width:10%;
 }
@@ -229,7 +228,7 @@ h6{ /*copyright*/
 }
 
 .featuredthm{
-    width: 22vw;
+    width: 32vw;
     position: relative;
 }
 
@@ -308,7 +307,6 @@ h6{ /*copyright*/
 
 .artthmtitle:hover, .featuredthmtitle:hover{
     opacity: .7;
-    font-weight: normal;
 }
 
 /* DROPDOWNS */
@@ -384,7 +382,7 @@ h6{ /*copyright*/
     left:10vw;
     z-index:5;
     position: fixed;
-    font-size: 2.5vh;
+    font-size: 2vh;
     box-sizing: border-box;
 }
 
@@ -429,6 +427,7 @@ h6{ /*copyright*/
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: 150%;
 }
 
 /*DIMMER*/
@@ -441,6 +440,17 @@ h6{ /*copyright*/
     opacity: 75%;
     position:fixed;
 }
+
+/*INSTAGRAM*/
+
+.eapps-instagram-feed-posts-item-visible.eapps-instagram-feed-posts-item-loaded{
+    font-family: "capriola";
+}
+
+.eapps-instagram-feed a:hover{
+    font-weight: unset;
+}
+
 
 @media only screen and (max-width:600px) {
 
@@ -488,9 +498,6 @@ h6{ /*copyright*/
         width:100%;
         height: 3vh;
     }
-    h1{ /*reassigned*/
-        font-size:6vw;
-    } 
     .featuredthm{
         width: 100%;
         height: 22vh;

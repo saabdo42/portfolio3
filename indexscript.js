@@ -1,5 +1,10 @@
 var links = document.querySelectorAll(".link");
 var linklist = Array.from(links);
+var logo = document.getElementById("logo");
+var logosrcs = ["images/logogreen.png", "images/logoblue.png", "images/logopink.png"];
+var pos = 0;
+var changed = false;
+
 var currentpg;
 
 var pages = document.querySelectorAll(".page");
@@ -21,6 +26,21 @@ var droplist = Array.from(drops);
 let timeoutover = true; //timeout for the scroll so ur computer doesn't crash
 function retimer(){
     timeoutover = true;
+}
+
+function logoswitcher(){ //switches the logo when you scroll past it :)
+    
+    logo.src = logosrcs[pos];
+    if (scrollY > window.innerHeight && changed == false ){
+        changed = true;
+        pos++;
+    }
+    if (scrollY < window.innerHeight ){
+        changed = false;
+    }
+    if (pos > logosrcs.length - 1 ){
+        pos = 0;
+    }
 }
 
 function isvisible(check){ //checks for visible
@@ -91,14 +111,14 @@ function highlightpage() { //highlights the menu link of what page ur scrolled t
             }
             linklist[1].classList.replace("notcurrent", "current");
 
-        } else if( scrollY > pagelist[2].offsetTop && scrollY > document.body.scrollHeight - window.innerHeight * 2 ){
+        } else if( scrollY > pagelist[2].offsetTop && scrollY < pagelist[3].offsetTop ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
             linklist[2].classList.replace("notcurrent", "current");
 
-        } else if ( scrollY > document.body.scrollHeight - window.innerHeight * 2){
+        } else if ( scrollY > pagelist[3].offsetTop ){
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
