@@ -223,7 +223,7 @@ h6{ /*copyright*/
 .featuredbox{
     display:flex;
     gap: 1vh;
-    align-content: baseline;
+    justify-content: space-between;
     flex-grow: 1;
 }
 

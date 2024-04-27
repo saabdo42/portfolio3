@@ -27,7 +27,7 @@ let timeoutover = true; //timeout for the scroll so ur computer doesn't crash
 function retimer(){
     timeoutover = true;
 }
-
+ 
 function logoswitcher(){ //switches the logo when you scroll past it :)
     
     logo.src = logosrcs[pos];

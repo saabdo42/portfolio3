@@ -10,7 +10,7 @@
     position: fixed;
 }
 
-h4, h3{
+h4, h7{
     color: black;
     margin-top: 15vh;
     margin-left: 0vw;
@@ -18,10 +18,15 @@ h4, h3{
     font-size: 1vw;
 }
 
-h3{
+h7{
     margin-top: 7vh;
     margin-left: -2.5vh;
     font-size: 2vw;
+}
+
+h3{
+    font-size: 4vh;
+    width:100%;
 }
 
 #overviewbox{
@@ -39,8 +44,11 @@ h3{
 #processbox{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
     row-gap: 2vh;
+}
+
+#processbox p{
+    margin: 0;
 }
 
 .text{
@@ -49,12 +57,14 @@ h3{
     align-items: center;
 }
 
+/*
 #processbox img{
     max-width: 45%;
     height: 40vh;
     padding-right: 2vw;
     object-fit: contain;
 }
+*/
 
 .small{
     padding-left: 10vw;
@@ -65,6 +75,26 @@ h3{
     height: unset !important;
     text-align: center;
     padding: 0 15vw;
+}
+
+.tempimg2{
+    color: aqua;
+    object-fit: contain;
+    border: solid 1px black;
+    margin-right: 3vh;
+    box-sizing: border-box;
+    max-height: 30vh;
+}
+.imgbox{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 30vh;
+}
+
+.processsection{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .wideimgs{
@@ -135,7 +165,7 @@ h3{
         color:white;
         margin-top: 16vh;
     }
-    h3{
+    h7{
         margin-top:8vh;
         color:white;
         margin-left: -3vw;
