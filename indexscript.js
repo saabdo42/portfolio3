@@ -1,7 +1,9 @@
 var links = document.querySelectorAll(".link");
 var linklist = Array.from(links);
 var logo = document.getElementById("logo");
+var copyright = document.getElementById("copyright");
 var logosrcs = ["images/logogreen.png", "images/logoblue.png", "images/logopink.png"];
+var colors = [ "#96cc72", "#b4d8f2", "#f6b1cf" ]
 var pos = 0;
 var changed = false;
 
@@ -23,14 +25,33 @@ var thmlist = Array.from(thms);
 var drops = document.querySelectorAll(".drop");
 var droplist = Array.from(drops);
 
+document.addEventListener("keydown", keyboardShortcuts);
+
 let timeoutover = true; //timeout for the scroll so ur computer doesn't crash
 function retimer(){
     timeoutover = true;
 }
  
+function keyboardShortcuts(event) { //keyboard shortcuts
+
+    if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        bac();
+    }else if (event.key === "ArrowRight"){
+        event.preventDefault();
+        nex();
+    }else if (event.key === "Escape" ){
+        closedrop();
+    }else{
+        return;
+    }
+}
+
 function logoswitcher(){ //switches the logo when you scroll past it :)
     
     logo.src = logosrcs[pos];
+    copyright.style.color = colors[pos];
+
     if (scrollY > window.innerHeight && changed == false ){
         changed = true;
         pos++;
@@ -53,6 +74,7 @@ function isvisible(check){ //checks for visible
 
 function hide(object){ //hides
     object.classList.replace("vis", "invis");
+
 }
 
 function reveal(object){ //reveals
@@ -127,7 +149,7 @@ function highlightpage() { //highlights the menu link of what page ur scrolled t
     }
 }
 
-function closedrop() {  //loop hide all descriptions    
+function closedrop() {  //loop hide all descriptions
     for (i = 0; i < droplist.length; i++) {
         hide(droplist[i]);
     }

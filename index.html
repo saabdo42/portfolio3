@@ -13,7 +13,7 @@
 
         <div id="back" class="invis" onclick="bac()">&lt;</div>
         <div id="next" class="invis" onclick="nex()">&gt;</div>
-        <div class="invis" id="skrb"></div>
+        <div class="invis" id="skrb"  onclick="closedrop()"></div>
 
         <img id="burger" src="images/burger.png" onclick="burger()">
 
@@ -26,7 +26,7 @@
             </ul>
         </div>
 
-        <h6>
+        <h6 id="copyright">
             &copy; Sara Abdo 2024
         </h6>
 
@@ -64,7 +64,7 @@
                 <div id="linx">
                     <div class="linq">
                         <img src="images/iconS.png">
-                        <a href="webresume.pdf"> My resume </a>
+                        <a href="resume.pdf"> My resume </a>
                     </div>
                     <div class="linq">
                         <img src="images/iconinsta.png">
@@ -145,7 +145,7 @@
                 </li>
                 <li>
                     <img src="images/mona lise.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">What?<br>Animation</div>
+                    <div class="artthmtitle"  onclick="opendesc(this)">Six Word Story<br>Animation</div>
                 </li>
                 <li>
                     <img src="images/pyramid.png" class="artthm">
@@ -361,13 +361,14 @@
                 <img src="images/spark2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
             </div>
             <div class="bigimgholder">
-                <img src="images/spark1.png" class="bigimg vis">
+                <img src="images/spark1.png" class="bigimg invis">
                 <div class="window vis"><iframe src="https://player.vimeo.com/video/875253227?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="SPARK" name="sp"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
             </div>
             <div class="desctext">
                 <h3>SPARK</h3>
                 <p>April 2023<br>
                     A space travel brand and website that wants to spark a passion for science. 
+                    You can view the Figma prototype <a href="https://www.figma.com/proto/Y7FN5pj4pz51M5mTzjzZvW/SPARK?scaling=scale-down&node-id=12-2&starting-point-node-id=12%3A2">here.</a> 
                     Usually, space-themed designs are dark, with emphasis on sleekness and speed, but I designed this brand light and friendly. I used + and &times; for stars, as a wink at the educational theme. 
                     Made in Illustrator and Figma.
                 </p>
@@ -387,9 +388,9 @@
             <div class="desctext">
                 <h3>Design Manifesto</h3>
                 <p>December 2021<br>
-                    An interactive website representing my design process and “manifesto.” This was my first time doing web design, 
-                    so I did tons of research. I had to make a few compromises but managed to make a website I'm proud of. Made from scratch in VS code. <br>
-                    <a href="https://saabdo42.github.io/design-manifesto/">saabdo42.github.io/design-manifesto/</a><br>
+                    An interactive website representing my design process and “manifesto.” You can visit it <a href="https://saabdo42.github.io/design-manifesto/">here. </a>
+                    This was my first time doing web design, so I did tons of research. I had to make a few compromises but managed to make a 
+                    website I'm proud of. Made from scratch in VS code and hosted on Github. <br>
                     I recently updated it and cleaned the code a LOT with what I've learned about web design.
                 </p>
             </div>
@@ -416,8 +417,10 @@
             <div class="close" onclick=closedrop()>&times;</div>
             <div class="moreimg">
                 <img src="images/pyramid.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/riverdude.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/underworld dude.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                <img src="images/Psun.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                <img src="images/Pwheat.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                <img src="images/Priver.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                <img src="images/Punderworld.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
             </div>
             <div class="bigimgholder">
                 <img src="images/pyramid.png" class="bigimg vis">
@@ -425,7 +428,8 @@
             <div class="desctext">
                 <h3>The Great Pyramid of Giza</h3>
                 <p>October 2022<br>
-                    A poster about one of the 7 ancient wonders of the world. Scan with the Artivive app to see AR animation! Made in Illustrator and After Effects.
+                    A poster about one of the 7 ancient wonders of the world, inspired by Jessica Hische's daily drop cap series and
+                    Penguin drop caps. Scan with the Artivive app to see AR animation! Made in Illustrator and After Effects.
                 </p>
             </div>
         </div>
