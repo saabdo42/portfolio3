@@ -530,7 +530,7 @@ li a:visited{
         font-size: 7vw;
     }
     #back, #next{
-        bottom: 5%;
+        bottom: 0;
         top:unset;
     }
 }
