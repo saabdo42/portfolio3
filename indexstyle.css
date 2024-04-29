@@ -13,7 +13,7 @@ body{
     font-family: "capriola";
     margin:0;
     overflow-x: hidden;
-    font-size:2vh;
+    font-size: clamp(14px, 1.1vw, 20px);
     box-sizing: border-box;
 } 
 
@@ -30,30 +30,28 @@ a:hover{
 }
 
 .page{
-    padding-top: 10vh;
+    padding-top: 8vw;
 }
 
 h1, h2, h3, h4 {
     font-weight: bolder;
-    color: black;
-    z-index: 1;
+    line-height: unset;
 }
 
-h2{
-    font-size: 3.2vw;
+h2{  /* about me, work, case studies, */
+    font-size: clamp(40px, 50px, 60px);
     margin: 2vw 0;
 }
 
-h3{
-    font-size: 4vh;
+h3{ /* branding, everything else*/
+    font-size: clamp(20px, 30px, 40px);
     margin-bottom: 0.5em;
 }
 
-h4{
-    font-size: 2vw;
-    margin-top: 58vh;
-    margin-left: 6vw;
-    position: absolute;
+h4{ /* graphic design*/
+    font-size: clamp(20px, 30px, 40px);
+    margin: 0 6vw;
+    position: relative;
     -webkit-user-select: none; user-select: none;
     color:white;
 }
@@ -61,31 +59,28 @@ h4{
 #landing{
     width: 85vw;
     height:100vh;
-    top:0;
-    right: 0;
+    position: absolute;
     opacity: 100%;
     margin-left: 15vw;
     background-attachment: fixed;
     background-image: url("images/banner.png");
     background-size: cover;
+    z-index: -10;
 }
-
-/*
-#landing img{
-    filter: blur(8px); -webkit-filter: blur(8px);
-}
-*/
 
 #dimmer{
     width: 100%;
     height:100%;
     background-color: black;
     opacity:60%;
+    position: absolute;
+    top:0;
+    z-index: -9;
 }
 
 #logo{
-    width: 25vw;
-    position: absolute;
+    width: clamp( 30px, 400px, 90vw);
+    position: relative;
     z-index: 5;
     margin-left: 5vw;
     margin-top:25vh;
@@ -95,7 +90,9 @@ h4{
     padding-left: 2vw; padding-right: 18vw;
     box-sizing: border-box;
     margin-left: 14vw;
-    padding-bottom: 10vh;
+    padding-bottom: 6vw;
+    position: absolute;
+    top: 100vh;
 }
 
 /* MENU */
@@ -103,7 +100,7 @@ h4{
 #menu{
     width:14vw;
     height:100%;
-    padding-left: 2vw;
+    padding-left: clamp( 20px, 30px, 40px );
     box-sizing: border-box;
     z-index: 3;
     position: fixed;
@@ -113,9 +110,8 @@ h4{
 #burger{
     display: none;
     right:8vw;
-    top:3vh;
+    top:5vh;
     width:12vw;
-    height:10vh;
     position:fixed;
     object-fit: scale-down;
     z-index: 4;
@@ -135,7 +131,7 @@ h4{
 #menu li a{
     text-decoration: none;
     display:block;
-    font-size: 2.2vh;
+    font-size: 1vw;
     height:70%;
     position: relative;
     padding-top: 10%;
@@ -158,7 +154,7 @@ li a:visited{
 }
 
 #copyright{ 
-    font-size: 2.5vh;
+    font-size: clamp( 16px, 20px, 80vw);
     color: var(--sprout );
     position: fixed;
     bottom: 2vh;
@@ -171,26 +167,24 @@ li a:visited{
 
 #meimg{
     object-fit: cover;
-    height:36vh;
+    height: clamp(100px, 280px, 80vw);
     aspect-ratio: 1;
     float: left;
     border-radius: 50%;
-    padding: 3vh;
+    padding: 2vw;
     -webkit-user-select: none; user-select: none;
     box-sizing: border-box;
-    margin-left: -3vh;
+    margin-left: -1vw;
 }
 
 #medesc{
     display: flex;
-    height: 36vh;
     align-items: center;
     flex-wrap: wrap;
 }
 
 #medesc img{
-    width: 2.5vw;
-    height: 2vw;
+    width: clamp(10px, 30px, 12vw);
     margin: .5vw;
     object-fit: contain;
     -webkit-user-select: none; user-select: none;
@@ -204,18 +198,23 @@ li a:visited{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 5vh;
+    margin-left: -.5vw;
     gap: 2vw;
 }
 .linq{
-    line-height: 2vw;
+    border: none;
+    font-size: unset;
+    background-color: white;
+    line-height: clamp(10px, 30px, 12vw);
+    cursor: pointer;
+    padding: .5vw;
 }
 .linq img{
     margin: 0 !important;
     float: left;
 }
 
-.linq :hover{
+.linq:hover{
     color: var(--sprout);
     font-weight: unset;
 }
@@ -223,13 +222,12 @@ li a:visited{
 /*FEATURED*/
 .featuredbox{
     display:flex;
-    gap: 1vh;
+    gap: 1vw;
     justify-content: space-between;
-    flex-grow: 1;
 }
 
 .featuredthm{
-    width: 32vw;
+    width: clamp(300px, 490px, 600px);
     position: relative;
 }
 
@@ -249,7 +247,7 @@ li a:visited{
     align-content: baseline;
     padding: 0;
     justify-content: space-between;
-    margin-top: 5vh;
+    margin-top: 2vw;
 }
 
 .artbox{
@@ -257,15 +255,14 @@ li a:visited{
 }
 
 .brandbox li{
-    width: 32vw;
+    width: clamp(300px, 490px, 600px);
     max-height: unset !important;
     list-style-type: none;
     position: relative;
 }
 
 .artbox li{
-    height:30vh;
-    max-width: 50vh;
+    height: clamp( 50px, 180px, 90vw);
     flex-grow:1;
     list-style-type: none;
     position: relative;
@@ -301,7 +298,6 @@ li a:visited{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3vh;
     cursor: pointer;
     text-align: center;
     font-weight: bolder;
@@ -314,14 +310,14 @@ li a:visited{
 /* DROPDOWNS */
 
 .close{
-    width:5%;
+    width: clamp(40px, 60px, 15vw);
     aspect-ratio: 1;
     z-index: 6;
     display:flex;
     top:0;
     right:0;
     position:absolute;
-    font-size:7vh;
+    font-size: clamp(30px, 50px, 60px);
     -webkit-user-select: none; user-select:none;
     line-height: 100%;
     justify-content: center;
@@ -333,22 +329,19 @@ li a:visited{
 }
 
 #back, #next{
-    height:6vh;
-    aspect-ratio: 1;
     position: fixed;
-    top:81vh;
-    z-index: 10;
+    top: 40%;
+    z-index: 30;
     text-align: center;
     -webkit-user-select: none; user-select: none;
-    font-size: 4vh;
-    line-height: 100%;
-    left: 10vw;
+    font-size: clamp(30px, 50px, 60px);
+    left: 7vw;
     font-family: monospace;
     color: var(--sky );
 }
 
 #next{
-    right:10vw;
+    right:7vw;
     left:unset;
 }
 
@@ -381,23 +374,23 @@ li a:visited{
     width:80vw;
     height:80vh;
     top:6vh;
-    left:10vw;
+    left:9.5vw;
     z-index:10;
     position: fixed;
-    font-size: 2vh;
+    font-size: .9vw;
     box-sizing: border-box;
 }
 
 .moreimg{
     width:15%;
-    height:96%;
+    height:100%;
     position: absolute;
     box-sizing: border-box;
-    padding:3vh;
+    padding:1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:1vh;
+    gap:.5vw;
 }
 
 .descimg{
@@ -413,7 +406,7 @@ li a:visited{
     left: 15%;
     position: absolute;
     box-sizing: border-box;
-    padding:3vh;
+    padding:1vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -425,11 +418,10 @@ li a:visited{
     position: absolute;
     left:60%;
     box-sizing: border-box;
-    padding:3vh;
+    padding:1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 150%;
 }
 
 .desctext a{
@@ -452,100 +444,63 @@ li a:visited{
 .eapps-instagram-feed-posts-item-visible.eapps-instagram-feed-posts-item-loaded{
     font-family: "capriola";
 }
-
 .eapps-instagram-feed a:hover{
     font-weight: unset;
 }
 
-
-@media only screen and (max-width:600px) {
-
+@media only screen and (max-width:600px){
     #landing{
         width: 100vw;
-        height: 100vh;
         margin-left: unset;
-    }
-    #logo{
-        width: 70vw;
-        z-index: 2;
-    }
-    h4{
-        margin-top: 45vh;
-        font-size: 6vw;
-    }
-    #content{
-        width:100vw;
-        margin:0;
-        padding: 8vw;
     }
     #copyright{ 
         width: 100%;
         text-align: center;
         margin-left: unset;
     }
-    h2{
-        font-size: 6vh;
+    #content{
+        margin-left: unset;
+        padding: 0 10vw;
+        width: 100vw;
     }
     #meimg{
-        float:unset;
-        margin: 0;
-        width: 100%;
-        height: unset;
-        padding:5vh;
-    }
-    #medesc{
-        height: unset;
-    }
-    #medesc img{
-        width: 10vw;
-        height: 10vh;
+        float: unset;
+        margin: unset;
     }
     #linx{
-        height: unset;
         flex-wrap: wrap;
-    } 
+        width: 80%;
+        margin: auto;
+    }
     .linq{
         width: 100%;
-        line-height: 10vh;
+        padding: 2vw;
     }
-    .linq a{
-        padding: 2vh;
+    .linq img{
+        margin: unset;
     }
     .featuredbox{
         flex-wrap: wrap;
     }
-    .featuredthm{
-        width: 100%;
-        height: 22vh;
-    }
-    .brandbox .artthm{
-        width: 100%;
-        max-width: unset;
-    }
-    .artthm{
-        max-width: 41vw;
-    }
     .drop{
-        width:100%; left:0;
-        height:100%; top:0;
-        font-size:2vh;
-        z-index: 5;
-    }    
-    .descimg{
-        max-height: unset;
-    }
-    .bigimgholder{
         width:100%;
-        height:50%;
-        padding-top: 6vh;
-        left:unset;
+        left: 0;
+        height: 100%;
+        top:0;
+        font-size: unset;
     }
     .moreimg{
         height:10%;
         width:100%;
         flex-direction: row;
         top:50%;
-        padding-top: 0; padding-bottom: 0;
+        padding:0;
+    }
+    .bigimgholder{
+        width:100%;
+        height:50%;
+        left:unset;
+        padding: 5vw;
     }
     .desctext{
         width:100%;
@@ -554,48 +509,25 @@ li a:visited{
         left:unset;
         top:60%;
         justify-content: unset;
-    }
-    h3{
-        font-size: 3vh;
-    }
+        padding: 5vw;
+    }    
+    .descimg{
+        max-height: unset;
+    }  
     #skrb{ 
         display:none !important; 
     }
-    #back, #next{
-        height:8%;
-        font-size:12vw;
-        bottom: 5%;
-        top:auto;
-    }
-    .close{
-        width:12vw;
-    }
-    #menu{
-        width:100%;
-        height:100%;
-        position: fixed;
-        background-color: #222222;
-        padding-left: 4%;
-    }
-    ul{
-        height:auto;
-        padding: 0;
-    }
-    li{
-        width:100% !important;
-        height:unset;
-    }
-    li a{
-        color:white;
-    }
-    .artbox li{
-        width: unset !important;
-    }
-    #current{
-        box-sizing: border-box;
-    }
     #menu{
         display: none;
+        background-color: white;
+    }
+    #menu li a{
+        padding: 0;
+        font-size: 7vw;
+    }
+    #back, #next{
+        bottom: 5%;
+        top:unset;
     }
 }
 
