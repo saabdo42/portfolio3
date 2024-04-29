@@ -175,4 +175,7 @@ h3{
     #logo{
         width:42vw;
     }
+    #content{
+        top: 10vh;
+    }
 }

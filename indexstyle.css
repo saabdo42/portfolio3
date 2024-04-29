@@ -513,6 +513,9 @@ li a:visited{
     }    
     .descimg{
         max-height: unset;
+    }
+    .drop h3{
+        margin:0;
     }  
     #skrb{ 
         display:none !important; 
@@ -520,6 +523,7 @@ li a:visited{
     #menu{
         display: none;
         background-color: white;
+        width: 100%;
     }
     #menu li a{
         padding: 0;
