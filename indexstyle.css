@@ -401,8 +401,8 @@ li a:visited{
 }
 
 .bigimgholder{
-    width:45%;
-    height:96%;
+    width:55%;
+    height:100%;
     left: 15%;
     position: absolute;
     box-sizing: border-box;
@@ -413,10 +413,10 @@ li a:visited{
 }
 
 .desctext{
-    width:40%;
+    width:30%;
     height:100%;
     position: absolute;
-    left:60%;
+    right: 0;
     box-sizing: border-box;
     padding:1vw;
     display: flex;
