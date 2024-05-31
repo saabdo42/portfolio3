@@ -164,7 +164,7 @@ li a:visited{
     bottom: 2vh;
     margin:0;
     margin-left: 2vw;
-    z-index: 50;
+    z-index: 29;
 }
 
 /*ABOUT*/
@@ -495,6 +495,13 @@ li a:visited{
         padding: 0 10vw;
         width: 100vw;
     }
+    #medesc{
+        height: unset;
+        flex-direction: row;
+    }
+    #medescleft, #medescright{
+        width: 100%;
+    }
     #meimg{
         float: unset;
         margin: unset;
@@ -513,6 +520,9 @@ li a:visited{
     }
     .featuredbox{
         flex-wrap: wrap;
+    }
+    .featuredthm, .brandbox li{
+        flex-basis: 100%;
     }
     .drop{
         width:100%;
