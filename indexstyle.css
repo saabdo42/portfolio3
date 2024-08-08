@@ -84,6 +84,44 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Fix for branding section images */
+.brandbox li {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.brandbox .artthm {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Center align images */
+.artbox, .brandbox {
+  justify-content: center;
+}
+
+/* Fix for landing background */
+#landing {
+  background-attachment: scroll;
+  background-position: center;
+}
+
+/* Ensure full width on mobile */
+@media only screen and (max-width: 600px) {
+  #landing, #content {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  
+  .artbox li, .brandbox li {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 body{
     background-color: white;
     color: black;
