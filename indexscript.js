@@ -9,14 +9,15 @@ var changed = false;
 
 var currentpg;
 
-var pages = document.querySelectorAll(".page");
-var pagelist = Array.from(pages);
+var sections = document.querySelectorAll("section");
+var sectionlist = Array.from(sections);
 
-var menu = document.getElementById("menu");
+var nav = document.querySelector("nav");
 var burg = document.getElementById("burger");
 
 var backbutton = document.getElementById("back");
 var nextbutton = document.getElementById("next");
+var closebutton = document.getElementById("close");
 var skrb = document.getElementById("skrb");
 
 var thms = document.querySelectorAll(".artthmtitle");
@@ -81,30 +82,30 @@ function reveal(object){ //reveals
     object.classList.replace("invis", "vis");
 }
 
-function mobilehidemenu() {
+function mobilehidenav() {
     if (window.innerWidth > 600){
-        menu.classList = "vis"
+        nav.classList = "vis"
     }else{
-        menu.classList = "invis"
+        nav.classList = "invis"
         burg.classList = "vis"
     }
 }
 
 function burger() {
-    if (isvisible(menu) == true){
-        hide(menu)
+    if (isvisible(nav) == true){
+        hide(nav)
     }else{
-        reveal(menu)
+        reveal(nav)
     } 
 }
 
-function mobilemenuclick() { //hides the menu after clicking a link on mobile
+function mobilenavclick() { //hides the nav after clicking a link on mobile
     if ( window.innerWidth < 600 ){
-        hide(menu);
+        hide(nav);
     }
 }
 
-function highlightpage() { //highlights the menu link of what page ur scrolled to 
+function highlightsection() { //highlights the nav link of what section ur scrolled to 
 
     if (timeoutover == false){
         return;
@@ -113,34 +114,34 @@ function highlightpage() { //highlights the menu link of what page ur scrolled t
         timeoutover = false;
         setTimeout(retimer, 100);
 
-        if (scrollY < pagelist[0].offsetTop ){ 
+        if (scrollY < sectionlist[0].offsetTop ){ 
             
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
 
-        } else if( scrollY > pagelist[0].offsetTop && scrollY < pagelist[1].offsetTop ){
+        } else if( scrollY > sectionlist[0].offsetTop && scrollY < sectionlist[1].offsetTop ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
             linklist[0].classList.replace("notcurrent", "current");
 
-        } else if( scrollY > pagelist[1].offsetTop && scrollY < pagelist[2].offsetTop ){
+        } else if( scrollY > sectionlist[1].offsetTop && scrollY < sectionlist[2].offsetTop ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
             linklist[1].classList.replace("notcurrent", "current");
 
-        } else if( scrollY > pagelist[2].offsetTop && scrollY < pagelist[3].offsetTop ){
+        } else if( scrollY > sectionlist[2].offsetTop && scrollY < sectionlist[3].offsetTop ){
 
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
             linklist[2].classList.replace("notcurrent", "current");
 
-        } else if ( scrollY > pagelist[3].offsetTop ){
+        } else if ( scrollY > sectionlist[3].offsetTop ){
             for (i=0; i < linklist.length; i++){
                 linklist[i].classList.replace("current", "notcurrent");
             }
@@ -155,6 +156,7 @@ function closedrop() {  //loop hide all descriptions
     }
     hide(backbutton);
     hide(nextbutton);
+    hide(closebutton);
     hide(skrb);
 }
 
@@ -166,9 +168,14 @@ function opendesc(thingie) {  //reveal description of the box u clicked on
     var thmnail = droplist[whichthm].getElementsByClassName("descimg");
     bigimgs[0].src = thmnail[0].src;
 
+    if ( !bigimgs[0].parentElement.parentElement.parentElement.classList.contains("haspdf")){
+        reveal(bigimgs[0]);
+    }
+
     reveal(droplist[whichthm]);
     reveal(backbutton);
     reveal(nextbutton);
+    reveal(closebutton);
     reveal(skrb);
 }
 
@@ -193,8 +200,7 @@ function bac(){
     var bigimgs = droplist[nextvisdesc].getElementsByClassName("bigimg");
     var thmnails = droplist[nextvisdesc].getElementsByClassName("descimg");
 
-    if (droplist[nextvisdesc].classList.contains("haspdf") == true) //if there's a pdf
-    {
+    if (droplist[nextvisdesc].classList.contains("haspdf") == true){ //if there's a pdf
         reveal(droplist[nextvisdesc].querySelector(".window")); //show pdf not bigimg
         hide(droplist[nextvisdesc].querySelector(".bigimg"))
     } 

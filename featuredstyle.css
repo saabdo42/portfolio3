@@ -29,8 +29,8 @@ h3{
     width:100%;
 }
 
-#content{
-    top: 0;
+main{
+    top: unset;
 }
 
 #overviewbox{
@@ -60,15 +60,6 @@ h3{
     display: flex;
     align-items: center;
 }
-
-/*
-#processbox img{
-    max-width: 45%;
-    height: 40vh;
-    padding-right: 2vw;
-    object-fit: contain;
-}
-*/
 
 .small{
     padding-left: 10vw;
@@ -137,17 +128,17 @@ h3{
     padding-top: 8vh;
 }
 
-@media only screen and (min-width:600px) and (max-width:1081px) {
+@media (min-width:600px) and (max-width:1081px) {
     .tempimg2, #overviewbox img{
-        max-height: 20vh;
+        max-height: 15vh;
     }
 }
 
-@media only screen and (max-width:600px) {
+@media (max-width:600px) {
 
     #overviewbox{
         width: 100vw;
-        margin: -8vw;
+        margin: 0 -10vw;
     }
     #overviewbox img{
         max-height: 10vh;
@@ -185,7 +176,7 @@ h3{
     #logo{
         width:42vw;
     }
-    #content{
+    main{
         top: 10vh;
     }
 }

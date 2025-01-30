@@ -9,482 +9,503 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     </head>
 
-    <body onload="mobilehidemenu()" onscroll="highlightpage(), logoswitcher()"> 
-
-        <div id="back" class="invis" onclick="bac()">&lt;</div>
-        <div id="next" class="invis" onclick="nex()">&gt;</div>
-        <div class="invis" id="skrb"  onclick="closedrop()"></div>
-
-        <img id="burger" src="images/burger.png" onclick="burger()">
-
-        <div id="menu" class="invis"> 
-            <ul>
-                <li class="link notcurrent" onclick="mobilemenuclick()"> <a href="#aboutpage">About me</a> </li> 
-                <li class="link notcurrent" onclick="mobilemenuclick()"> <a href="#featuredpage">Case studies</a></li>
-                <li class="link notcurrent" onclick="mobilemenuclick()"> <a href="#workpage">Work</a> </li> 
-                <li class="link notcurrent" onclick="mobilemenuclick()"> <a href="#contactpage">Contact me</a></li>
-            </ul>
-        </div>
-
-        <h6 id="copyright">
-            &copy; Sara Abdo 2024
-        </h6>
-
-        <div id="landing" >
+    <body onload="mobilehidenav()" onscroll="highlightsection(), logoswitcher()"> 
+        
+        <header>
             <img src="images/logogreen.png" id="logo"> 
             <h4>Graphic Design</h4>
             <div id="dimmer"></div>
-        </div>
+        </header>
 
-        <div id="content"> 
+        <h6 id="copyright">&copy; Sara Abdo 2025</h6>
 
-            <div id="aboutpage" class="page"></div>
-            <h2>About me</h2>
+        <div id="back" class="invis" onclick="bac()">&lt;</div>
+        <div id="next" class="invis" onclick="nex()">&gt;</div>
+        <div id="close" class="invis" onclick="closedrop()">&times;</div>
+        <div id="skrb" class="invis" onclick="closedrop()"></div>
 
-            <div id="medesc">
-                <div id="medescleft">
-                    <img src="images/me4.jpg" id="meimg">
-                </div>
-                <div id="medescright">
-                    <p>Hi!! I'm Sara :&#41; <br>
-                        I'm a jack-of-all-trades designer and an MTSU alumni. I like to try my hand at anything, from sewing to game 
-                        development, but I'm especially fond of digital illustration. I'm from Egypt, raised in TN, so I'm fluent in 1.65 languages! <br>
-                        I want to focus my career on cohesive brand systems and illustration. I have experience in all these softwares:
-                    </p>
-                    <div id="badges">
-                        <img src="images/iconai.png" title="Adobe Illustrator">
-                        <img src="images/iconps.png" title="Adobe Photoshop">
-                        <img src="images/iconid.png" title="Adobe InDesign">
-                        <img src="images/iconae.png" title="Adobe After Effects">
-                        <img src="images/iconfigma.png" title="Figma">
-                        <img src="images/iconblend.png" title="Blender">
-                        <img src="images/iconunity.png" title="Unity">    
-                    </div>
-                    <p>
-                        I also know HTML and CSS and coded this website from scratch. 
-                        I've earned the <b>Adobe Illustrator</b> and <b>Adobe Indesign certification</b> on Linkedin Learning. <br>
-                        1 engineering major + 1 horrible semester = 1 art major with a strange transcript
-                    </p>
-    
-                    <div id="linx">
-                        <a class="linq" href="resume.pdf"> 
-                            <img src="images/iconS.png">
-                            My resume
-                        </a>
-                        <a class="linq" href="https://www.instagram.com/sara.abdo.design/"> 
-                            <img src="images/iconinsta.png">
-                            My Instagram
-                        </a>
-                        <a class="linq" href="https://vimeo.com/saraabdo"> 
-                            <img src="images/iconvim.png">
-                            My Vimeo
-                        </a>
-                    </div> 
-                </div>    
-            </div>
+        <img id="burger" src="images/burger.png" onclick="burger()">
 
-            <div id="featuredpage" class="page"></div>
-            <h2>Case studies</h2>
-            <div class="featuredbox">
-                <div class="featuredthm">
-                    <a href="featured1.html">
-                        <img src="images/reassigned/thumbnail.png">
-                        <div class="featuredthmtitle">ReAssigned<br>School Supplies</div> 
-                    </a>
-                </div>
-                <div class="featuredthm">
-                    <a href="featured2.html">
-                        <img src="images/onhumanity/thumbnail.png">
-                        <div class="featuredthmtitle">On Humanity<br>Senior Project</div> 
-                    </a>
-                </div>
-            </div>
-
-            <div id="workpage" class="page"></div>
-            <h2>Work</h2>
-
-            <h3>Branding</h3>
-            <ul class="brandbox">
-                <li>
-                    <img src="images/gloriathm.png" class="artthm">
-                    <div class="artthmtitle" onclick="opendesc(this)">Gloria<br>Book Festival</div>
-                </li>
-                <li>
-                    <img src="images/pantrythm.png" class="artthm">
-                    <div class="artthmtitle" onclick="opendesc(this)">The Pantry<br>Gift Shop</div>
-                </li>
-                <li>
-                    <img src="images/azlthm.png" class="artthm">
-                    <div class="artthmtitle" onclick="opendesc(this)">Azalea<br>Coffee Shop</div>
-                </li>
-                <li>
-                    <img src="images/luxthm.png" class="artthm">
-                    <div class="artthmtitle" onclick="opendesc(this)">Lux<br>Holiday Campaign</div>
-                </li>
+        <nav class="invis"> 
+            <ul>
+                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#about">About me</a></li> 
+                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#featured">Case studies</a></li>
+                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#work">Work</a></li> 
+                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#contact">Contact me</a></li>
             </ul>
+        </nav>
 
-            <h3>Everything else!</h3>
-            <ul class="artbox">
-                <li>
-                    <img src="images/raven2.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">The Raven Cycle<br>Series Covers</div>
-                </li>
-                <li>
-                    <img src="images/carrot mockup.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Carrot Myth<br>Posters</div>
-                </li>
-                <li>
-                    <img src="images/ORBIT2.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Orbit<br>Magazine</div>
-                </li>
-                <li>
-                    <img src="images/bbthm.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Best Buddies<br>Annual Report</div>
-                </li>
-                <li>
-                    <img src="images/spark1.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)" >SPARK<br>Space Travel</div>
-                </li>
-                <li>
-                    <img src="images/manifestothm.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Design Manifesto<br>Website</div>
-                </li>
-                <li>
-                    <img src="images/mona lise.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Six Word Story<br>Animation</div>
-                </li>
-                <li>
-                    <img src="images/pyramid.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Great Pyramid<br>Animated Poster</div>
-                </li>
-                <li>
-                    <img src="images/musroomspec2.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Musroom<br>Font</div>
-                </li>
-                <li>
-                    <img src="images/pisanothm.png" class="artthm">
-                    <div class="artthmtitle"  onclick="opendesc(this)">Pisano Tales<br>Field Guide</div>
-                </li>
-                <li id="pagebreak"></li>
-            </ul>
+        <main> 
 
-            <h3 style="margin-bottom: 0;">Instagram</h3>
-            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-            <div class="elfsight-app-490eb2b9-dae5-43bb-90bd-211c87ab20c6" data-elfsight-app-lazy></div>
-            
-            <div id="contactpage" class="page"></div>
-            <h2>Contact me</h2>
+            <section id="about">
+                <h2>About me</h2>
 
-            <div data-aidaform-widget="form-2019-12" data-url="https://sarafish.aidaform.com/free-basic-contact-form" data-width="100%" data-height="500px" data-do-resize></div><script>(function(){var r,d=document,gt=d.getElementById,cr=d.createElement,tg=d.getElementsByTagName,id="aidaform-embed";if(!gt.call(d,id)){r=cr.call(d,"script");r.id=id;r.src="https://embed.aidaform.com/embed.js";(d.head || tg.call(d,"head")[0]).appendChild(r);}})()</script>
-            </div> 
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/gloriathm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/gloriaposter.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/gloriabands.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/gloria2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/gloriainsta.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/gloriasign.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <div class="window vis">
-                    <iframe src="https://online.fliphtml5.com/iygvg/tpmq/" class="pdf" ></iframe>
-                </div>
-                <img src="images/gloriathm.png" class="bigimg invis">
-            </div>
-            <div class="desctext">
-                <h3>Gloria</h3>
-                <p>April 2023<br>
-                    Branding, lineup poster, signage, schedule, social media, and merchandise for a young adult book festival. 
-                    Gloria's branding is inspired by its theme of adventure and fantasy, and its location at St Dunstan-in-the-East.
-                    Made in Illustrator, Photoshop, and Indesign.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/pantrythm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pantryshirts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pantrygifts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pantrygifts2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pantrymural.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pantrypkg.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <div class="window vis">
-                    <iframe src="https://online.fliphtml5.com/iygvg/rlxe/" class="pdf"></iframe>
-                </div>
-                <img src="images/pantrythm.png" class="bigimg invis">
-            </div>
-            <div class="desctext">
-                <h3>The Pantry</h3>
-                <p>June 2023<br>
-                    Branding and merchandise for a berry farm gift shop. Made in Illustrator, Blender, Photoshop, and Indesign.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/azlthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/azlbags.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/azlcup.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/azlcards.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/azlmenu.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/azlmugs.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <div class="window vis">
-                    <iframe src="https://online.fliphtml5.com/iygvg/lacq/" class="pdf" ></iframe>
-                </div>
-                <img src="images/lythm.png" class="bigimg invis">
-            </div>
-            <div class="desctext">
-                <h3>Azalea</h3>
-                <p>September 2021<br>
-                    A logo for an imaginary coffee shop in the Smoky Mountains. I took inspiration from Tennessee wildflowers and experimented 
-                    with a variable logo. Made in Illustrator, Photoshop, and Indesign.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/luxm1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/luxads.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/luxemail.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/luxgiftcard.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/luxpackage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/luxpage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <div class="window vis">
-                    <iframe src="https://online.fliphtml5.com/iygvg/sebp/" class="pdf" ></iframe>
-                </div>
-                <img src="images/luxemail.png" class="bigimg invis">
-            </div>
-            <div class="desctext">
-                <h3>Lux</h3>
-                <p>November 2023<br>
-                    A holiday campaign for Misho, a luxury jewelry brand. The line drawings are simple and elegant, while the typography is bold 
-                    like Misho's jewelry. Made in Illustrator & Indesign.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/raven3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/raven2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/raven1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/ravencurrent.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/raven3.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>The Raven Cycle</h3>
-                <p>February 2022 <br>
-                    A series of 4 book covers I made for Maggie Stiefvater's series <i>The Raven Cycle</i>. I felt like their current covers (shown in the last image) 
-                    didn't properly convey the storytelling and magical feeling of this series. I combined mystical and natural elements of the story in bold 
-                    illustrations. Made in Photoshop and InDesign.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/carrot1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/carrot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/carrot3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/carrot research.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/carrot sketch2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/carrot sketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/carrot1.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Carrots</h3>
-                <p>November 2022<br>
-                    A PSA poster series about the common myth that carrots make your eyesight better. I represented the myth conceptually. 
-                    Because of the origin of the myth, I researched WW2-era propaganda for the style. I unified the posters with their color scheme and repeated motifs. Made in Illustrator.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis haspdf">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/orbitthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/ORBIT3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/ORBIT2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <div class="window vis">
-                    <iframe src="https://online.fliphtml5.com/iygvg/ecni/" class="pdf" ></iframe>
-                </div>
-                <img src="images/ORBIT2.png" class="bigimg invis">
-            </div>
-            <div class="desctext">
-                <h3>Orbit Magazine</h3>
-                <p>May 2021<br>
-                    A magazine for space lovers, with experimental type setting, running sidebar, and table of contents. Made in Indesign.
-                </p>
-            </div>
-        </div>
+                <div id="medesc">
+                    <figure id="medescleft">
+                        <img src="images/me4.jpg">
+                    </figure>
+                    <article id="medescright">
+                        <p>Hi!! I'm Sara :&#41; <br>
+                            I'm a jack-of-all-trades designer and an MTSU alumni. I like to try my hand at anything, from sewing to game 
+                            development, but I'm especially fond of digital illustration. I'm from Egypt, raised in TN, so I'm fluent in 1.65 languages! <br>
+                            I want to focus my career on cohesive brand systems and illustration. I have experience in all these softwares:
+                        </p>
+                        <div id="badges">
+                            <img src="images/iconai.png" title="Adobe Illustrator">
+                            <img src="images/iconps.png" title="Adobe Photoshop">
+                            <img src="images/iconid.png" title="Adobe InDesign">
+                            <img src="images/iconae.png" title="Adobe After Effects">
+                            <img src="images/iconfigma.png" title="Figma">
+                            <img src="images/iconblend.png" title="Blender"> 
+                        </div>
+                        <p>
+                            I also know HTML and CSS and coded this website from scratch. 
+                            I've earned the <b>Adobe Illustrator</b> and <b>Adobe Indesign certification</b> on Linkedin Learning. <br>
+                            1 engineering major + 1 horrible semester = 1 art major with a strange transcript
+                        </p>
         
-        <div class="drop invis haspdf">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/bb.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/bb sketch.jpg" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <div class="window vis">
-                    <iframe src="https://online.fliphtml5.com/iygvg/hvai/" class="pdf" ></iframe>
+                        <div id="linx">
+                            <a class="linq" href="resume.pdf"> 
+                                <img src="images/iconS.png">
+                                My resume
+                            </a>
+                            <a class="linq" href="https://www.instagram.com/sara.abdo.design/"> 
+                                <img src="images/iconinsta.png">
+                                My Instagram
+                            </a>
+                            <a class="linq" href="https://vimeo.com/saraabdo"> 
+                                <img src="images/iconvim.png">
+                                My Vimeo
+                            </a>
+                        </div> 
+                    </article>    
                 </div>
-                <img src="images/bbsketch.png" class="bigimg invis">
-            </div>
-            <div class="desctext">
-                <h3>Best Buddies annual report</h3>
-                <p>March 2022<br>
-                    An annual report redesign for Best Buddies. I chose not to add any images and instead expanded the style of the Best Buddies logo done by Keith Haring. 
-                    Because the goal of the organization is to help the IDD community, I chose dyslexic-friendly fonts and tried to avoid information overload. Made in Indesign.
-                </p>
-            </div>
-        </div>
+            </section>
 
-        <div class="drop invis haspdf">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/spark1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/spark2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/spark1.png" class="bigimg invis">
-                <div class="window vis"><iframe src="https://player.vimeo.com/video/875253227?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-            <div class="desctext">
-                <h3>SPARK</h3>
-                <p>April 2023<br>
-                    A space travel brand and website that wants to spark a passion for science. 
-                    You can view the Figma prototype <a href="https://www.figma.com/proto/Y7FN5pj4pz51M5mTzjzZvW/SPARK?scaling=scale-down&node-id=12-2&starting-point-node-id=12%3A2">here.</a> 
-                    Usually, space-themed designs are dark, with emphasis on sleekness and speed, but I designed this brand light and friendly. I used + and &times; for stars, as a wink at the educational theme. 
-                    Made in Illustrator and Figma.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/manifestoscreenshot.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Design Manifesto</h3>
-                <p>December 2021<br>
-                    An interactive website representing my design process and “manifesto.” You can visit it <a href="https://saabdo42.github.io/design-manifesto/">here. </a>
-                    This was my first time doing web design, so I did tons of research. I had to make a few compromises but managed to make a 
-                    website I'm proud of. Made from scratch in VS code and hosted on Github. <br>
-                    I recently updated it and cleaned the code a LOT with what I've learned about web design.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis haspdf">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/mona lise.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/mona lise.png" class="bigimg invis">
-                <div class="window vis"><iframe src="https://player.vimeo.com/video/750160996?h=7c8246c636" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-            <div class="desctext">
-                <h3>What?</h3>
-                <p>October 2022<br>
-                    An animated six-word story. Made in Photoshop, Illustrator, and After Effects.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/pyramid.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/Psun.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/Pwheat.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/Priver.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/Punderworld.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/pyramid.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>The Great Pyramid of Giza</h3>
-                <p>October 2022<br>
-                    A poster about one of the 7 ancient wonders of the world, inspired by Jessica Hische's daily drop cap series and
-                    Penguin drop caps. Scan with the Artivive app to see AR animation! Made in Illustrator and After Effects.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/musroomspec2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/musroomspec1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/musroomgif.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/musroomsketch1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <img src="images/musroomspec2.png" class="bigimg vis">
-            </div>
-            <div class="desctext">
-                <h3>Musroom</h3>
-                <p>April 2021<br>
-                    A font. I experimented with inktraps and learned more about type anatomy and type specimens.
-                </p>
-            </div>
-        </div>
-
-        <div class="drop invis">
-            <div class="close" onclick=closedrop()>&times;</div>
-            <div class="moreimg">
-                <img src="images/pisanothm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pisano1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pisano2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                <img src="images/pisano3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-            </div>
-            <div class="bigimgholder">
-                <div class="window vis">
-                    <iframe src="https://online.fliphtml5.com/iygvg/dbkb/" class="pdf"></iframe>
+            <section id="featured">
+                <h2>Case studies</h2>
+                <div class="featuredbox">
+                    <div class="featuredthm">
+                        <a href="featured1.html">
+                            <img src="images/reassigned/thumbnail.png">
+                            <div class="featuredthmtitle">ReAssigned<br>School Supplies</div> 
+                        </a>
+                    </div>
+                    <div class="featuredthm">
+                        <a href="featured2.html">
+                            <img src="images/onhumanity/thumbnail.png">
+                            <div class="featuredthmtitle">On Humanity<br>Senior Project</div> 
+                        </a>
+                    </div>
                 </div>
-                <img src="images/bbsketch.png" class="bigimg invis">
-            </div>
-            <div class="desctext">
-                <h3>Pisano Tales</h3>
-                <p>April 2023<br>
-                    A field guide of tourist locations in my neighborhood, full of nostalgic suburban shenanigans. 
-                    The illustrations are inspired by childrens' books. All the stories are true btw. Made in Procreate & Indesign.
-                </p>
-            </div>
-        </div>
+            </section>
 
+            <section id="work">
+                <h2>Work</h2>
+
+                <h3>Branding</h3>
+                <ul class="brandbox">
+                    <li>
+                        <img src="images/gloriathm.png" class="artthm">
+                        <div class="artthmtitle" onclick="opendesc(this)">Gloria<br>Book Festival</div>
+                    </li>
+                    <li>
+                        <img src="images/pantrythm.png" class="artthm">
+                        <div class="artthmtitle" onclick="opendesc(this)">The Pantry<br>Gift Shop</div>
+                    </li>
+                    <li>
+                        <img src="images/azlthm.png" class="artthm">
+                        <div class="artthmtitle" onclick="opendesc(this)">Azalea<br>Coffee Shop</div>
+                    </li>
+                    <li>
+                        <img src="images/luxthm.png" class="artthm">
+                        <div class="artthmtitle" onclick="opendesc(this)">Lux<br>Holiday Campaign</div>
+                    </li>
+                </ul>
+
+                <h3>Everything else!</h3>
+                <ul class="artbox">
+                    <li>
+                        <img src="images/raven2.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">The Raven Cycle<br>Series Covers</div>
+                    </li>
+                    <li>
+                        <img src="images/carrot mockup.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Carrot Myth<br>Posters</div>
+                    </li>
+                    <li>
+                        <img src="images/ORBIT2.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Orbit<br>Magazine</div>
+                    </li>
+                    <li>
+                        <img src="images/bbthm.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Best Buddies<br>Annual Report</div>
+                    </li>
+                    <li>
+                        <img src="images/spark1.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)" >SPARK<br>Space Travel</div>
+                    </li>
+                    <li>
+                        <img src="images/manifestothm.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Design Manifesto<br>Website</div>
+                    </li>
+                    <li>
+                        <img src="images/mona lise.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Six Word Story<br>Animation</div>
+                    </li>
+                    <li>
+                        <img src="images/pyramid.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Great Pyramid<br>Animated Poster</div>
+                    </li>
+                    <li>
+                        <img src="images/musroomspec2.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Musroom<br>Font</div>
+                    </li>
+                    <li>
+                        <img src="images/pisanothm.png" class="artthm">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Pisano Tales<br>Field Guide</div>
+                    </li>
+                    <li id="pagebreak"></li>
+                </ul>
+
+                <h3 style="margin-bottom: 0;">Instagram</h3>
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-490eb2b9-dae5-43bb-90bd-211c87ab20c6" data-elfsight-app-lazy></div>
+            
+            </section>
+
+            <section id="contact">
+                <h2>Contact me</h2>
+
+                <div data-aidaform-widget="form-2019-12" data-url="https://sarafish.aidaform.com/free-basic-contact-form" data-width="100%" data-height="500px" data-do-resize></div>
+                <script>(function(){var r,d=document,gt=d.getElementById,cr=d.createElement,tg=d.getElementsByTagName,id="aidaform-embed";if(!gt.call(d,id)){r=cr.call(d,"script");r.id=id;r.src="https://embed.aidaform.com/embed.js";(d.head || tg.call(d,"head")[0]).appendChild(r);}})()</script> 
+            </section>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/gloriathm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/gloriaposter.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/gloriabands.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/gloria2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/gloriainsta.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/gloriasign.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <div class="window vis">
+                            <iframe src="https://online.fliphtml5.com/iygvg/tpmq/" class="pdf" ></iframe>
+                        </div>
+                        <img loading="lazy" src="images/gloriathm.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Gloria</h3>
+                        <p>April 2023<br>
+                            Branding, lineup poster, signage, schedule, social media, and merchandise for a young adult book festival. 
+                            Gloria's branding is inspired by its theme of adventure and fantasy, and its location at St Dunstan-in-the-East.
+                            Made in Illustrator, Photoshop, and Indesign.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/pantrythm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pantryshirts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pantrygifts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pantrygifts2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pantrymural.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pantrypkg.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <div class="window vis">
+                            <iframe src="https://online.fliphtml5.com/iygvg/rlxe/" class="pdf"></iframe>
+                        </div>
+                        <img loading="lazy" src="images/pantrythm.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>The Pantry</h3>
+                        <p>June 2023<br>
+                            Branding and merchandise for a berry farm gift shop. Made in Illustrator, Blender, Photoshop, and Indesign.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/azlthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/azlbags.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/azlcup.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/azlcards.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/azlmenu.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/azlmugs.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <div class="window vis">
+                            <iframe src="https://online.fliphtml5.com/iygvg/lacq/" class="pdf" ></iframe>
+                        </div>
+                        <img loading="lazy" src="images/lythm.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Azalea</h3>
+                        <p>September 2021<br>
+                            A logo for an imaginary coffee shop in the Smoky Mountains. I took inspiration from Tennessee wildflowers and experimented 
+                            with a variable logo. Made in Illustrator, Photoshop, and Indesign.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/luxm1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/luxads.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/luxemail.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/luxgiftcard.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/luxpackage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/luxpage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <div class="window vis">
+                            <iframe src="https://online.fliphtml5.com/iygvg/sebp/" class="pdf" ></iframe>
+                        </div>
+                        <img loading="lazy" src="images/luxemail.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Lux</h3>
+                        <p>November 2023<br>
+                            A holiday campaign for Misho, a luxury jewelry brand. The line drawings are simple and elegant, while the typography is bold 
+                            like Misho's jewelry. Made in Illustrator & Indesign.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/raven3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/raven2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/raven1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/ravencurrent.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/raven3.png" class="bigimg vis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>The Raven Cycle</h3>
+                        <p>February 2022 <br>
+                            A series of 4 book covers I made for Maggie Stiefvater's series <i>The Raven Cycle</i>. I felt like their current covers (shown in the last image) 
+                            didn't properly convey the storytelling and magical feeling of this series. I combined mystical and natural elements of the story in bold 
+                            illustrations. Made in Photoshop and InDesign.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/carrot1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/carrot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/carrot3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/carrot research.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/carrot sketch2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/carrot sketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/carrot1.png" class="bigimg vis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Carrots</h3>
+                        <p>November 2022<br>
+                            A PSA poster series about the common myth that carrots make your eyesight better. I represented the myth conceptually. 
+                            Because of the origin of the myth, I researched WW2-era propaganda for the style. I unified the posters with their color scheme and repeated motifs. Made in Illustrator.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/orbitthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/ORBIT3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/ORBIT2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <div class="window vis">
+                            <iframe src="https://online.fliphtml5.com/iygvg/ecni/" class="pdf" ></iframe>
+                        </div>
+                        <img loading="lazy" src="images/ORBIT2.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Orbit Magazine</h3>
+                        <p>May 2021<br>
+                            A magazine for space lovers, with experimental type setting, running sidebar, and table of contents. Made in Indesign.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/bb.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/bb sketch.jpg" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <div class="window vis">
+                            <iframe src="https://online.fliphtml5.com/iygvg/hvai/" class="pdf" ></iframe>
+                        </div>
+                        <img loading="lazy" src="images/bbsketch.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Best Buddies annual report</h3>
+                        <p>March 2022<br>
+                            An annual report redesign for Best Buddies. I chose not to add any images and instead expanded the style of the Best Buddies logo done by Keith Haring. 
+                            Because the goal of the organization is to help the IDD community, I chose dyslexic-friendly fonts and tried to avoid information overload. Made in Indesign.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/spark1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/spark2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/spark1.png" class="bigimg invis">
+                        <video width="100%" controls="true" class="window vis">
+                            <source src="images/sparkvideo.mp4" type="video/mp4">Video not found
+                        </video>
+                    </figure>
+                    <div class="desctext">
+                        <h3>SPARK</h3>
+                        <p>April 2023<br>
+                            A space travel brand and website that wants to spark a passion for science. 
+                            You can view the Figma prototype <a href="https://www.figma.com/proto/Y7FN5pj4pz51M5mTzjzZvW/SPARK?scaling=scale-down&node-id=12-2&starting-point-node-id=12%3A2">here.</a> 
+                            Usually, space-themed designs are dark, with emphasis on sleekness and speed, but I designed this brand light and friendly. I used + and &times; for stars, as a wink at the educational theme. 
+                            Made in Illustrator and Figma.
+                        </p>
+                    </div>
+                </div>                
+            </article>
+
+            <article class="drop invis">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/manifestoscreenshot.png" class="bigimg vis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Design Manifesto</h3>
+                        <p>December 2021<br>
+                            An interactive website representing my design process and “manifesto.” You can visit it <a href="https://saabdo42.github.io/design-manifesto/">here. </a>
+                            This was my first time doing web design, so I did tons of research. I had to make a few compromises but managed to make a 
+                            website I'm proud of. Made from scratch in VS code and hosted on Github. <br>
+                            I recently updated it and cleaned the code a LOT with what I've learned about web design.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/mona lise.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/mona lise.png" class="bigimg invis">
+                        <video width="100%" controls="true" class="window vis">
+                            <source src="images/monalisavideo.mp4" type="video/mp4">Video not found
+                        </video>
+                    </figure>
+                    <div class="desctext">
+                        <h3>What?</h3>
+                        <p>October 2022<br>
+                            An animated six-word story. Made in Photoshop, Illustrator, and After Effects.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/pyramid.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/Psun.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/Pwheat.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/Priver.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/Punderworld.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/pyramid.png" class="bigimg vis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>The Great Pyramid of Giza</h3>
+                        <p>October 2022<br>
+                            A poster about one of the 7 ancient wonders of the world, inspired by Jessica Hische's daily drop cap series and
+                            Penguin drop caps. Scan with the Artivive app to see AR animation! Made in Illustrator and After Effects.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/musroomspec2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/musroomspec1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/musroomgif.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/musroomsketch1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/musroomspec2.png" class="bigimg vis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Musroom</h3>
+                        <p>April 2021<br>
+                            A font. I experimented with inktraps and learned more about type anatomy and type specimens.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis haspdf">
+                <div class="erm">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/pisanothm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pisano1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pisano2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pisano3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <div class="window vis">
+                            <iframe src="https://online.fliphtml5.com/iygvg/dbkb/" class="pdf"></iframe>
+                        </div>
+                        <img loading="lazy" src="images/bbsketch.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Pisano Tales</h3>
+                        <p>April 2023<br>
+                            A field guide of tourist locations in my neighborhood, full of nostalgic suburban shenanigans. 
+                            The illustrations are inspired by childrens' books. All the stories are true btw. Made in Procreate & Indesign.
+                        </p>
+                    </div>
+                </div> 
+            </article>
+        </main>
         <script src="indexscript.js"></script>
     </body>
 </html>
