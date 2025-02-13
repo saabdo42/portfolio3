@@ -582,6 +582,7 @@ nav li.current a{
 
     .featuredthm, .brandbox li{
         height:20vw;
+        max-width:45%;
     }
     .artbox li{
         width:unset;
