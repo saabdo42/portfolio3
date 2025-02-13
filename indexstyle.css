@@ -247,7 +247,6 @@ nav li.current a{
 }
 
 .featuredthm, .brandbox li{
-    width: clamp(300px, 32vw, 600px);
     position: relative;
     flex-basis: 45%;
     flex-grow: 1;
@@ -298,7 +297,7 @@ nav li.current a{
 }
 
 .artthmtitle, .featuredthmtitle{
-    user-select: none;
+    user-select: none; -webkit-user-select: none;
     opacity: 0;
     transition: .5s;
     background-color: black;
@@ -538,6 +537,9 @@ nav li.current a{
         bottom: 0;
         top:unset;
     }
+    .descimg:hover{
+        transform: unset;
+    }
 }
 
 
@@ -573,6 +575,21 @@ nav li.current a{
         max-height: unset;
         max-width: 16%;
     }
+}
+
+/* safari */
+@supports (hanging-punctuation: first) and (font:-apple-system-body) and (-webkit-appearance:none){ 
+
+    .featuredthm, .brandbox li{
+        height:20vw;
+    }
+    .artbox li{
+        width:unset;
+    }
+    .artthm{
+        width:unset;
+    }
+
 }
 
 .vis{ display:block !important; }
