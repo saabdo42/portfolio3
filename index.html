@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="indexstyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Capriola" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     </head>
@@ -22,32 +22,30 @@
         <div id="back" class="invis" onclick="bac()">&lt;</div>
         <div id="next" class="invis" onclick="nex()">&gt;</div>
         <div id="close" class="invis" onclick="closedrop()">&times;</div>
-        <div id="skrb" class="invis" onclick="closedrop()"></div>
+        <div id="dimmer2" class="invis" onclick="closedrop()"></div>
 
         <img id="burger" src="images/burger.png" onclick="burger()">
 
         <nav class="invis"> 
             <ul>
-                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#about">About me</a></li> 
-                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#featured">Case studies</a></li>
-                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#work">Work</a></li> 
-                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#contact">Contact me</a></li>
+                <li class="navlink notcurrent" onclick="mobilenavclick()"> <a href="#about">About me</a></li> 
+                <li class="navlink notcurrent" onclick="mobilenavclick()"> <a href="#featured">Case studies</a></li>
+                <li class="navlink notcurrent" onclick="mobilenavclick()"> <a href="#work">Work</a></li> 
+                <li class="navlink notcurrent" onclick="mobilenavclick()"> <a href="#contact">Contact me</a></li>
             </ul>
         </nav>
 
         <main> 
-
             <section id="about">
                 <h2>About me</h2>
-
                 <div id="medesc">
                     <figure id="medescleft">
                         <img src="images/me4.jpg">
                     </figure>
                     <article id="medescright">
                         <p>Hi!! I'm Sara :&#41; <br>
-                            I'm a jack-of-all-trades designer and an MTSU alumni. I like to try my hand at anything, from sewing to game 
-                            development, but I'm especially fond of digital illustration. I'm from Egypt, raised in TN, so I'm fluent in 1.65 languages! <br>
+                            I'm a graphic designer, jack-of-all-trades artist, and MTSU alumni. I like to try my hand at anything, from sewing to game 
+                            development, but I'm especially fond of digital illustration. I'm from Egypt, raised in TN, so I'm bilingualish! <br>
                             I want to focus my career on cohesive brand systems and illustration. I have experience in all these softwares:
                         </p>
                         <div id="badges">
@@ -60,20 +58,20 @@
                         </div>
                         <p>
                             I also know HTML and CSS and coded this website from scratch. 
-                            I've earned the <b>Adobe Illustrator</b> and <b>Adobe Indesign certification</b> on Linkedin Learning. <br>
-                            1 engineering major + 1 horrible semester = 1 art major with a strange transcript
+                            I've earned the <b>Adobe Illustrator</b> and <b>Adobe Indesign certification</b> on Linkedin Learning, 
+                            and completed the <b>Learn HTML</b>, <b>Learn CSS</b>, and <b>Learn Intermediate CSS</b> courses on Codeacademy.<br>
                         </p>
         
-                        <div id="linx">
-                            <a class="linq" href="resume.pdf"> 
+                        <div id="aboutlinks">
+                            <a href="resume.pdf"> 
                                 <img src="images/iconS.png">
                                 My resume
                             </a>
-                            <a class="linq" href="https://www.instagram.com/sara.abdo.design/"> 
+                            <a href="https://www.instagram.com/sara.abdo.design/"> 
                                 <img src="images/iconinsta.png">
                                 My Instagram
                             </a>
-                            <a class="linq" href="https://vimeo.com/saraabdo"> 
+                            <a href="https://vimeo.com/saraabdo"> 
                                 <img src="images/iconvim.png">
                                 My Vimeo
                             </a>
@@ -84,88 +82,82 @@
 
             <section id="featured">
                 <h2>Case studies</h2>
-                <div class="featuredbox">
-                    <div class="featuredthm">
+                <ul class="halfgrid">
+                    <li>
                         <a href="featured1.html">
                             <img src="images/reassigned/thumbnail.png">
                             <div class="featuredthmtitle">ReAssigned<br>School Supplies</div> 
                         </a>
-                    </div>
-                    <div class="featuredthm">
+                    </li>
+                    <li>
                         <a href="featured2.html">
                             <img src="images/onhumanity/thumbnail.png">
                             <div class="featuredthmtitle">On Humanity<br>Senior Project</div> 
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </section>
 
             <section id="work">
                 <h2>Work</h2>
-
                 <h3>Branding</h3>
-                <ul class="brandbox">
+                <ul class="halfgrid">
                     <li>
-                        <img src="images/gloriathm.png" class="artthm">
+                        <img src="images/gloriathm.png">
                         <div class="artthmtitle" onclick="opendesc(this)">Gloria<br>Book Festival</div>
                     </li>
                     <li>
-                        <img src="images/pantrythm.png" class="artthm">
+                        <img src="images/pantrythm.png">
                         <div class="artthmtitle" onclick="opendesc(this)">The Pantry<br>Gift Shop</div>
                     </li>
                     <li>
-                        <img src="images/azlthm.png" class="artthm">
+                        <img src="images/azlthm.png">
                         <div class="artthmtitle" onclick="opendesc(this)">Azalea<br>Coffee Shop</div>
                     </li>
                     <li>
-                        <img src="images/luxthm.png" class="artthm">
+                        <img src="images/luxthm.png">
                         <div class="artthmtitle" onclick="opendesc(this)">Lux<br>Holiday Campaign</div>
                     </li>
                 </ul>
-
                 <h3>Everything else!</h3>
-                <ul class="artbox">
-                    <li>
-                        <img src="images/raven2.png" class="artthm">
+                <ul class="brickgrid">
+                    <li class="a1">
+                        <img src="images/raven2.png">
                         <div class="artthmtitle"  onclick="opendesc(this)">The Raven Cycle<br>Series Covers</div>
                     </li>
-                    <li>
-                        <img src="images/carrot mockup.png" class="artthm">
+                    <li class="a2">
+                        <img src="images/carrot mockup.png">
                         <div class="artthmtitle"  onclick="opendesc(this)">Carrot Myth<br>Posters</div>
                     </li>
-                    <li>
-                        <img src="images/ORBIT2.png" class="artthm">
+                    <li class="a3">
+                        <img src="images/ORBIT2.png">
                         <div class="artthmtitle"  onclick="opendesc(this)">Orbit<br>Magazine</div>
                     </li>
-                    <li>
-                        <img src="images/bbthm.png" class="artthm">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Best Buddies<br>Annual Report</div>
-                    </li>
-                    <li>
-                        <img src="images/spark1.png" class="artthm">
-                        <div class="artthmtitle"  onclick="opendesc(this)" >SPARK<br>Space Travel</div>
-                    </li>
-                    <li>
-                        <img src="images/manifestothm.png" class="artthm">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Design Manifesto<br>Website</div>
-                    </li>
-                    <li>
-                        <img src="images/mona lise.png" class="artthm">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Six Word Story<br>Animation</div>
-                    </li>
-                    <li>
-                        <img src="images/pyramid.png" class="artthm">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Great Pyramid<br>Animated Poster</div>
-                    </li>
-                    <li>
-                        <img src="images/musroomspec2.png" class="artthm">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Musroom<br>Font</div>
-                    </li>
-                    <li>
-                        <img src="images/pisanothm.png" class="artthm">
+                    <li class="b1"><img src="images/pisanothm.png">
                         <div class="artthmtitle"  onclick="opendesc(this)">Pisano Tales<br>Field Guide</div>
                     </li>
-                    <li id="pagebreak"></li>
+                    <li class="b2">
+                        <img src="images/spark1.png">
+                        <div class="artthmtitle"  onclick="opendesc(this)" >SPARK<br>Space Travel</div>
+                    </li>
+                    <li class="b3">
+                        <img src="images/manifestothm.png">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Design Manifesto<br>Website</div>
+                    </li>
+                    <li class="b4">
+                        <img src="images/pyramid.png">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Great Pyramid<br>Animated Poster</div>
+                    </li>
+                    <li class="c1">
+                        <img src="images/mona lise.png">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Six Word Story<br>Animation</div>
+                    </li>   
+                    <li class="c2">
+                        <img src="images/musroomspec2.png">
+                        <div class="artthmtitle"  onclick="opendesc(this)">Musroom<br>Font</div>
+                    </li>
+                    <li class="c3">
+                    </li>
                 </ul>
 
                 <h3 style="margin-bottom: 0;">Instagram</h3>
@@ -182,7 +174,7 @@
             </section>
 
             <article class="drop invis haspdf">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/gloriathm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/gloriaposter.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -209,7 +201,7 @@
             </article>
 
             <article class="drop invis haspdf">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/pantrythm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/pantryshirts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -234,7 +226,7 @@
             </article>
 
             <article class="drop invis haspdf">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/azlthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/azlbags.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -260,7 +252,7 @@
             </article>
 
             <article class="drop invis haspdf">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/luxm1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/luxads.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -286,7 +278,7 @@
             </article>
 
             <article class="drop invis">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/raven3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/raven2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -308,7 +300,7 @@
             </article>
 
             <article class="drop invis">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/carrot1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/carrot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -331,7 +323,7 @@
             </article>
 
             <article class="drop invis haspdf">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/orbitthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/ORBIT3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -351,31 +343,33 @@
                     </div>
                 </div>
             </article>
-            
+
             <article class="drop invis haspdf">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/bb.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/bb sketch.jpg" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pisanothm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pisano1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pisano2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img loading="lazy" src="images/pisano3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
                         <div class="window vis">
-                            <iframe src="https://online.fliphtml5.com/iygvg/hvai/" class="pdf" ></iframe>
+                            <iframe src="https://online.fliphtml5.com/iygvg/dbkb/" class="pdf"></iframe>
                         </div>
                         <img loading="lazy" src="images/bbsketch.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
-                        <h3>Best Buddies annual report</h3>
-                        <p>March 2022<br>
-                            An annual report redesign for Best Buddies. I chose not to add any images and instead expanded the style of the Best Buddies logo done by Keith Haring. 
-                            Because the goal of the organization is to help the IDD community, I chose dyslexic-friendly fonts and tried to avoid information overload. Made in Indesign.
+                        <h3>Pisano Tales</h3>
+                        <p>April 2023<br>
+                            A field guide of tourist locations in my neighborhood, full of nostalgic suburban shenanigans. 
+                            The illustrations are inspired by childrens' books. All the stories are true btw. Made in Procreate & Indesign.
                         </p>
                     </div>
-                </div>
+                </div> 
             </article>
 
             <article class="drop invis haspdf">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/spark1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/spark2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -399,7 +393,7 @@
             </article>
 
             <article class="drop invis">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -420,28 +414,8 @@
                 </div>
             </article>
 
-            <article class="drop invis haspdf">
-                <div class="erm">
-                    <div class="moreimg">
-                        <img loading="lazy" src="images/mona lise.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                    </div>
-                    <figure class="bigimgholder">
-                        <img loading="lazy" src="images/mona lise.png" class="bigimg invis">
-                        <video width="100%" controls="true" class="window vis">
-                            <source src="images/monalisavideo.mp4" type="video/mp4">Video not found
-                        </video>
-                    </figure>
-                    <div class="desctext">
-                        <h3>What?</h3>
-                        <p>October 2022<br>
-                            An animated six-word story. Made in Photoshop, Illustrator, and After Effects.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
             <article class="drop invis">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/pyramid.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/Psun.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -462,8 +436,28 @@
                 </div>
             </article>
 
+            <article class="drop invis haspdf">
+                <div class="dropcontent">
+                    <div class="moreimg">
+                        <img loading="lazy" src="images/mona lise.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img loading="lazy" src="images/mona lise.png" class="bigimg invis">
+                        <video width="100%" controls="true" class="window vis">
+                            <source src="images/monalisavideo.mp4" type="video/mp4">Video not found
+                        </video>
+                    </figure>
+                    <div class="desctext">
+                        <h3>What?</h3>
+                        <p>October 2022<br>
+                            An animated six-word story. Made in Photoshop, Illustrator, and After Effects.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
             <article class="drop invis">
-                <div class="erm">
+                <div class="dropcontent">
                     <div class="moreimg">
                         <img loading="lazy" src="images/musroomspec2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                         <img loading="lazy" src="images/musroomspec1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
@@ -480,30 +474,6 @@
                         </p>
                     </div>
                 </div>
-            </article>
-
-            <article class="drop invis haspdf">
-                <div class="erm">
-                    <div class="moreimg">
-                        <img loading="lazy" src="images/pisanothm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pisano1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pisano2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pisano3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                    </div>
-                    <figure class="bigimgholder">
-                        <div class="window vis">
-                            <iframe src="https://online.fliphtml5.com/iygvg/dbkb/" class="pdf"></iframe>
-                        </div>
-                        <img loading="lazy" src="images/bbsketch.png" class="bigimg invis">
-                    </figure>
-                    <div class="desctext">
-                        <h3>Pisano Tales</h3>
-                        <p>April 2023<br>
-                            A field guide of tourist locations in my neighborhood, full of nostalgic suburban shenanigans. 
-                            The illustrations are inspired by childrens' books. All the stories are true btw. Made in Procreate & Indesign.
-                        </p>
-                    </div>
-                </div> 
             </article>
         </main>
         <script src="indexscript.js"></script>

@@ -1,16 +1,11 @@
-var links = document.querySelectorAll(".link");
-var linklist = Array.from(links);
+var navlinks = document.querySelectorAll(".navlink");
+var navlinklist = Array.from(navlinks);
 var logo = document.getElementById("logo");
 var copyright = document.getElementById("copyright");
 var logosrcs = ["images/logogreen.png", "images/logoblue.png", "images/logopink.png"];
 var colors = [ "#96cc72", "#b4d8f2", "#f6b1cf" ]
-var pos = 0;
-var changed = false;
-
-var currentpg;
-
-var sections = document.querySelectorAll("section");
-var sectionlist = Array.from(sections);
+var logoversion = 0;
+var logochanged = false;
 
 var nav = document.querySelector("nav");
 var burg = document.getElementById("burger");
@@ -18,7 +13,10 @@ var burg = document.getElementById("burger");
 var backbutton = document.getElementById("back");
 var nextbutton = document.getElementById("next");
 var closebutton = document.getElementById("close");
-var skrb = document.getElementById("skrb");
+var dimmer2 = document.getElementById("dimmer2");
+
+var sections = document.querySelectorAll("section");
+var sectionlist = Array.from(sections);
 
 var thms = document.querySelectorAll(".artthmtitle");
 var thmlist = Array.from(thms);
@@ -50,18 +48,18 @@ function keyboardShortcuts(event) { //keyboard shortcuts
 
 function logoswitcher(){ //switches the logo when you scroll past it :)
     
-    logo.src = logosrcs[pos];
-    copyright.style.color = colors[pos];
+    logo.src = logosrcs[logoversion];
+    copyright.style.color = colors[logoversion];
 
-    if (scrollY > window.innerHeight && changed == false ){
-        changed = true;
-        pos++;
+    if (scrollY > window.innerHeight && logochanged == false ){
+        logochanged = true;
+        logoversion++;
     }
     if (scrollY < window.innerHeight ){
-        changed = false;
+        logochanged = false;
     }
-    if (pos > logosrcs.length - 1 ){
-        pos = 0;
+    if (logoversion > logosrcs.length - 1 ){
+        logoversion = 0;
     }
 }
 
@@ -116,36 +114,36 @@ function highlightsection() { //highlights the nav link of what section ur scrol
 
         if (scrollY < sectionlist[0].offsetTop ){ 
             
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
+            for (i=0; i < navlinklist.length; i++){
+                navlinklist[i].classList.replace("current", "notcurrent");
             }
 
         } else if( scrollY > sectionlist[0].offsetTop && scrollY < sectionlist[1].offsetTop ){
 
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
+            for (i=0; i < navlinklist.length; i++){
+                navlinklist[i].classList.replace("current", "notcurrent");
             }
-            linklist[0].classList.replace("notcurrent", "current");
+            navlinklist[0].classList.replace("notcurrent", "current");
 
         } else if( scrollY > sectionlist[1].offsetTop && scrollY < sectionlist[2].offsetTop ){
 
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
+            for (i=0; i < navlinklist.length; i++){
+                navlinklist[i].classList.replace("current", "notcurrent");
             }
-            linklist[1].classList.replace("notcurrent", "current");
+            navlinklist[1].classList.replace("notcurrent", "current");
 
         } else if( scrollY > sectionlist[2].offsetTop && scrollY < sectionlist[3].offsetTop ){
 
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
+            for (i=0; i < navlinklist.length; i++){
+                navlinklist[i].classList.replace("current", "notcurrent");
             }
-            linklist[2].classList.replace("notcurrent", "current");
+            navlinklist[2].classList.replace("notcurrent", "current");
 
         } else if ( scrollY > sectionlist[3].offsetTop ){
-            for (i=0; i < linklist.length; i++){
-                linklist[i].classList.replace("current", "notcurrent");
+            for (i=0; i < navlinklist.length; i++){
+                navlinklist[i].classList.replace("current", "notcurrent");
             }
-            linklist[3].classList.replace("notcurrent", "current");
+            navlinklist[3].classList.replace("notcurrent", "current");
         }
     }
 }
@@ -157,12 +155,12 @@ function closedrop() {  //loop hide all descriptions
     hide(backbutton);
     hide(nextbutton);
     hide(closebutton);
-    hide(skrb);
+    hide(dimmer2);
 }
 
-function opendesc(thingie) {  //reveal description of the box u clicked on
+function opendesc(clickedthm) {  //reveal description of the box u clicked on
 
-    var whichthm = thmlist.indexOf(thingie);
+    var whichthm = thmlist.indexOf(clickedthm);
 
     var bigimgs = droplist[whichthm].getElementsByClassName("bigimg");  //expanding the first thmnail
     var thmnail = droplist[whichthm].getElementsByClassName("descimg");
@@ -176,7 +174,7 @@ function opendesc(thingie) {  //reveal description of the box u clicked on
     reveal(backbutton);
     reveal(nextbutton);
     reveal(closebutton);
-    reveal(skrb);
+    reveal(dimmer2);
 }
 
 function bac(){
@@ -241,29 +239,29 @@ function nex(){
     }
 }
 
-function enlarge(frog) { //enlarges thumbnails
+function enlarge(hoveredimg) { //enlarges thumbnails
 
-    var newimgsrc = frog.src;
-    var bois = document.getElementsByClassName("bigimg");
-    var pdfs = document.getElementsByClassName("window");
+    var newimgsrc = hoveredimg.src;
+    var allbigimgs = document.getElementsByClassName("bigimg");
+    var allpdfwindows = document.getElementsByClassName("window");
     
-    if (frog.classList.contains("pdfthm") == true){ //if thumbnail is tagged as pdf
+    if (hoveredimg.classList.contains("pdfthm") == true){ //if thumbnail is tagged as pdf
 
-        for (k=0; k<pdfs.length; k++) { //show all pdf windows
-            reveal(pdfs[k]);
+        for (k=0; k<allpdfwindows.length; k++) { //show all pdf windows
+            reveal(allpdfwindows[k]);
         }
-        for (j=0; j<bois.length; j++) { //hide all bigimg
-            hide(bois[j]);
+        for (j=0; j<allbigimgs.length; j++) { //hide all bigimg
+            hide(allbigimgs[j]);
         }
 
     }else{ //if thumbanil is not tagged as pdf
         
-        for (h=0; h<pdfs.length; h++) { //hide all pdf windows
-            hide(pdfs[h]);
+        for (h=0; h<allpdfwindows.length; h++) { //hide all pdf windows
+            hide(allpdfwindows[h]);
         }
-        for (k=0; k<bois.length; k++) { //show all bigimg
-            reveal(bois[k]);
-            bois[k].src = newimgsrc; //choose which bigimg to show
+        for (k=0; k<allbigimgs.length; k++) { //show all bigimg
+            reveal(allbigimgs[k]);
+            allbigimgs[k].src = newimgsrc; //choose which bigimg to show
         }
     }
 }

@@ -10,11 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
-    <body onload="mobilehidemenu()" onscroll="highlightpage()">
+    <body onload="mobilehidenav()" onscroll="highlightsection()">
 
         <img id="burger" src="images/burger.png" onclick="burger()">
 
-        <div id="menu" class="invis"> 
+        <nav class="invis"> 
 
             <a href="index.html"> 
                 <img src="images/logoback.png" id="logo">  
@@ -22,265 +22,264 @@
             </a>
 
             <ul>
-                <li class="link notcurrent"> <a href="#aboutpage">Overview</a> </li>
-                <li class="link notcurrent"> <a href="#workpage">Process</a> </li> 
-                <li class="link notcurrent"> <a href="#contactpage">Final</a></li>
+                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#overview">Overview</a> </li>
+                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#process">Process</a> </li> 
+                <li class="link notcurrent" onclick="mobilenavclick()"> <a href="#final">Final</a></li>
             </ul>
-        </div>
+        </nav>
 
-        <h6 id="copyright">
-            &copy; Sara Abdo 2024
-        </h6>        
+        <h6 id="copyright">&copy; Sara Abdo 2025</h6>        
 
-        <div id="content"> 
+        <main> 
 
-            <div id="aboutpage" class="page"></div>
-            <div id="overviewbox">
-                <img src="images/onhumanity/display.png">
-                <img src="images/onhumanity/displaylaika.png">
-                <img src="images/onhumanity/displaybook2.png">
-                <img src="images/onhumanity/logo.png">
-                <img src="images/onhumanity/displayapp.png">
-                <img src="images/onhumanity/displaybookmarks.png">
-                <img src="images/onhumanity/displaysweater.jpg">
-                <img src="images/onhumanity/displaystickers.png">
-                <img src="images/onhumanity/displayfundraiser.jpg">
-            </div>
+            <section id="overview">
+                <div id="overviewbox">
+                    <img src="images/onhumanity/display.png">
+                    <img src="images/onhumanity/displaylaika.png">
+                    <img src="images/onhumanity/displaybook2.png">
+                    <img src="images/onhumanity/logo.png">
+                    <img src="images/onhumanity/displayapp.png">
+                    <img src="images/onhumanity/displaybookmarks.png">
+                    <img src="images/onhumanity/displaysweater.jpg">
+                    <img src="images/onhumanity/displaystickers.png">
+                    <img src="images/onhumanity/displayfundraiser.jpg">
+                </div>
+            </section>
 
-            <div id="workpage" class="page"></div>
-            <h2>Process</h2>
-            <div id="processbox">
+            <section id="process">
+                <h2>Process</h2>
+                <div id="processbox">
 
-                <h3>Project boundaries</h3>
-                <p>
-                    Senior project!! A semester-long endeavor like this needs some serious thought.
-                    Our gallery theme was POV: Showcase an issue/question and all its viewpoints/answers in an unbiased way. 
-                    The goal is not to convince anyone of a side, but to show of them equally, so that viewers could learn more about 
-                    other viewpoints and walk away with more understanding, to combat polarization instead of adding to it. </p>
-                <p>
-                    I thought very long and hard about my topic. At first I wanted to do something lighthearted, because silly things 
-                    are my forte, and went through a ton of ideas, but i ended up choosing a very serious topic. If I had to spend all 
-                    semester doing one thing, it had to be meaningful. The topic I chose was: Is humanity good or evil? It's a very broad
-                    topic, but everyone has thoughts on this shaped by their past experiences. If humans are evil, why are we nice to 
-                    strangers on public transportation? But if humans are good, why do we keep launching genocides against each other? 
-                    The bottom line is, no matter what you believe, we can't despair at the evil or turn a blind eye. We have to make
-                    the world a better place ourselves.
-                </p>
+                    <h3>Project boundaries</h3>
+                    <p>
+                        Senior project!! A semester-long endeavor like this needs some serious thought.
+                        Our gallery theme was POV: Showcase an issue/question and all its viewpoints/answers in an unbiased way. 
+                        The goal is not to convince anyone of a side, but to show of them equally, so that viewers could learn more about 
+                        other viewpoints and walk away with more understanding, to combat polarization instead of adding to it. </p>
+                    <p>
+                        I thought very long and hard about my topic. At first I wanted to do something lighthearted, because silly things 
+                        are my forte, and went through a ton of ideas, but i ended up choosing a very serious topic. If I had to spend all 
+                        semester doing one thing, it had to be meaningful. The topic I chose was: Is humanity good or evil? It's a very broad
+                        topic, but everyone has thoughts on this shaped by their past experiences. If humans are evil, why are we nice to 
+                        strangers on public transportation? But if humans are good, why do we keep launching genocides against each other? 
+                        The bottom line is, no matter what you believe, we can't despair at the evil or turn a blind eye. We have to make
+                        the world a better place ourselves.
+                    </p>
 
-                <h3>Visuals</h3>
-                <p>
-                    I wanted to include stars, to represent the light that we could choose to be. I hand doodled a bunch of 
-                    wonky, imperfect stars, scanned them in, and used them throughout the project. I decided to make my color palette 
-                    in shades of orange, because it can be a warm, comforting color, like a fireplace, or an intense, dangerous color, 
-                    like a wildfire. I added a dark blue to complement and anchor the color palette. I also chose to focus all my 
-                    illustrations on hands. Hands can be used to help or hurt, so I thought this was a perfect way to express my topic. 
-                    For the typography, I wanted contrasting fonts. One display serif, to show the grandness of history and seriousness 
-                    of human evil, and a handwritten, softer font, to represent small acts of kindness and the good in human hearts.
-                </p>
-                <img class="tempimg2" src="images/onhumanity/starsketch.jpg">
-                <img class="tempimg2" src="images/onhumanity/colorz.png">
-                <img class="tempimg2" src="images/onhumanity/type.png">
-                <img class="tempimg2" src="images/onhumanity/starz.png">
+                    <h3>Visuals</h3>
+                    <p>
+                        I wanted to include stars, to represent the light that we could choose to be. I hand doodled a bunch of 
+                        wonky, imperfect stars, scanned them in, and used them throughout the project. I decided to make my color palette 
+                        in shades of orange, because it can be a warm, comforting color, like a fireplace, or an intense, dangerous color, 
+                        like a wildfire. I added a dark blue to complement and anchor the color palette. I also chose to focus all my 
+                        illustrations on hands. Hands can be used to help or hurt, so I thought this was a perfect way to express my topic. 
+                        For the typography, I wanted contrasting fonts. One display serif, to show the grandness of history and seriousness 
+                        of human evil, and a handwritten, softer font, to represent small acts of kindness and the good in human hearts.
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/starsketch.jpg">
+                    <img class="tempimg2" src="images/onhumanity/colorz.png">
+                    <img class="tempimg2" src="images/onhumanity/type.png">
+                    <img class="tempimg2" src="images/onhumanity/starz.png">
 
-                <h3>Logo</h3>
-                <p>
-                    I decided to call this project On Humanity, like a dissertation. After a few sketches, I chose this layout for the logo.
-                </p>
-                <img class="tempimg2" src="images/onhumanity/names.png">
-                <img class="tempimg2" src="images/onhumanity/logosketch.png">
-                <img class="tempimg2" src="images/onhumanity/logo2.png">
+                    <h3>Logo</h3>
+                    <p>
+                        I decided to call this project On Humanity, like a dissertation. After a few sketches, I chose this layout for the logo.
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/names.png">
+                    <img class="tempimg2" src="images/onhumanity/logosketch.png">
+                    <img class="tempimg2" src="images/onhumanity/logo2.png">
 
-                <h3>Poetry</h3>
-                <p>
-                    The biggest piece of my project, which i had to start first, was my poetry book. I decided to use poetry because 
-                    i think it's a good way to talk about this topic. They're firsthand accounts of emotional things, whether it's love, 
-                    violence, war, friendship, or kindness. The poetry foundation was a very helpful resource for this. I read a ton of poems 
-                    and chose 50 of them to put in the book. I wasn't much of a poetry fan before, but this project made me appreciate it a 
-                    lot more. For example, i chose "During the Second World War", because it showcases a small act of kindness as a light in 
-                    someone's day during a miserable situation.</p>
-                <p>
-                    For the text layout of this book, I put all the authors' names in the friendlier handwritten font, the body copy in the 
-                    serif font, and the titles in the display version of that serif. I made sure the spacing was the same for each poem, 
-                    and turned on hanging punctuation to make sure I had clean margins. </p>
-                <p>
-                    I arranged the poems to make them flow, and evenly space the positive and negative and illustrated ones.
-                    Lastly, I know these topics can be very upsetting, so I put a content warning and "author's note" at the beginning of
-                    the book.
-                </p>
-                <img class="tempimg2" src="images/onhumanity/inddlayout.png">
-                <img class="tempimg2" src="images/onhumanity/poemorder.png">
-                <img class="tempimg2" src="images/onhumanity/cw.png">
+                    <h3>Poetry</h3>
+                    <p>
+                        The biggest piece of my project, which i had to start first, was my poetry book. I decided to use poetry because 
+                        i think it's a good way to talk about this topic. They're firsthand accounts of emotional things, whether it's love, 
+                        violence, war, friendship, or kindness. The poetry foundation was a very helpful resource for this. I read a ton of poems 
+                        and chose 50 of them to put in the book. I wasn't much of a poetry fan before, but this project made me appreciate it a 
+                        lot more. For example, i chose "During the Second World War", because it showcases a small act of kindness as a light in 
+                        someone's day during a miserable situation.</p>
+                    <p>
+                        For the text layout of this book, I put all the authors' names in the friendlier handwritten font, the body copy in the 
+                        serif font, and the titles in the display version of that serif. I made sure the spacing was the same for each poem, 
+                        and turned on hanging punctuation to make sure I had clean margins. </p>
+                    <p>
+                        I arranged the poems to make them flow, and evenly space the positive and negative and illustrated ones.
+                        Lastly, I know these topics can be very upsetting, so I put a content warning and "author's note" at the beginning of
+                        the book.
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/inddlayout.png">
+                    <img class="tempimg2" src="images/onhumanity/poemorder.png">
+                    <img class="tempimg2" src="images/onhumanity/cw.png">
 
-                <h3>Illustrations</h3>
-                <p>
-                    For my illustrations I wanted something that was messy, real, and symbolic. I gathered a moodboard of references.
-                    At first I wanted 2 different art styles, to show the 2 different opinions, but it's not so black and white, so 
-                    I decided to just use 1 style and let the reader decide what they think. </p>
-                <p>
-                    I was especially inspired by art made from survivors of tragedies, and these in particular, because they're so colorful. 
-                    One artist uses color to express something undescribable, and another uses it hopefully. </p>
-                <p>
-                    I made this style guide for myself, to make sure I stayed consistent throughout this big project.
-                    I took and used lots of illustrations to make sure the hands looked real.
-                    So I illustrated 12 poems, putting the illustration big and full bleed on the page. For the rest of the poems I 
-                    scattered stars on the page. 
-                </p>               
-                <img class="tempimg2" src="images/onhumanity/survivorart.png">
-                <img class="tempimg2" src="images/onhumanity/styleguide.png">
-                <img class="tempimg2" src="images/onhumanity/illustrationrefs.png">
-                <img class="tempimg2" src="images/onhumanity/illustrationsketch.png">
-                <img class="tempimg2" src="images/onhumanity/illustrationfinal.png">
-                <img class="tempimg2" src="images/onhumanity/illustrations.png">
+                    <h3>Illustrations</h3>
+                    <p>
+                        For my illustrations I wanted something that was messy, real, and symbolic. I gathered a moodboard of references.
+                        At first I wanted 2 different art styles, to show the 2 different opinions, but it's not so black and white, so 
+                        I decided to just use 1 style and let the reader decide what they think. </p>
+                    <p>
+                        I was especially inspired by art made from survivors of tragedies, and these in particular, because they're so colorful. 
+                        One artist uses color to express something undescribable, and another uses it hopefully. </p>
+                        <img class="tempimg2" src="images/onhumanity/survivorart.png">
+                    <p>
+                        I made this style guide for myself, to make sure I stayed consistent throughout this big project.
+                        I took and used lots of references to make sure the hands looked real.
+                        So I illustrated 12 poems, putting the artwork big and full bleed on the page. For the rest of the poems I 
+                        scattered stars on the page. 
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/styleguide.png">
+                    <img class="tempimg2" src="images/onhumanity/illustrationrefs.png">
+                    <img class="tempimg2" src="images/onhumanity/illustrationsketch.png">
+                    <img class="tempimg2" src="images/onhumanity/illustrationfinal.png">
+                    <img class="tempimg2" src="images/onhumanity/illustrations.png">
                 
-                <h3>Crisis!</h3>
-                <p>
-                    At this point I came across a problem: everything was looking very similar. I considered overhauling the whole
-                    project to make it simpler and more "designy," but I thought the painterly illustrations had a lot of life and
-                    i wanted it to work. So to add variety i decided to make a secondary art style that was like the first, but 
-                    only outlines and no fill. I used this one on the cover and through the rest of the project. 
-                </p>
-                <img class="tempimg2" src="images/onhumanity/bookcover.png">
+                    <h3>Crisis!</h3>
+                    <p>
+                        At this point I came across a problem: everything was looking very similar. I considered overhauling the whole
+                        project to make it simpler and more "designy," but I thought the painterly illustrations had a lot of life and
+                        i wanted it to work. So to add variety i decided to make a secondary art style that was like the first, but 
+                        only outlines and no fill. I used this one on the cover and through the rest of the project. 
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/bookcover.png">
 
-                <h3>App</h3>
-                <p>
-                    My second item was a reflective journal. At first I was going to make it a paper journal, but I decided an app would give 
-                    it a social aspect and let me work on my UXUI skills. The features I included were photos, written journals, a calendar, 
-                    and a group. I made all the app icons hands, to go with my theme, and made them in a very simplified version of my style.
-                    Then I prototyped it all in Figma. You can look through it yourself <a href="https://www.figma.com/proto/VLUobMm4S9feJyoMgAOzPW/on-humanity-app?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down">here.</a>
-                </p>
-                <img class="tempimg2" src="images/onhumanity/icons.png">
-                <img class="tempimg2" src="images/onhumanity/mkpapp.png">
-                <img class="tempimg2" src="images/onhumanity/figmascreenshot.png">
+                    <h3>App</h3>
+                    <p>
+                        My second item was a reflective journal. At first I was going to make it a paper journal, but I decided an app would give 
+                        it a social aspect and let me work on my UXUI skills. The features I included were photos, written journals, a calendar, 
+                        and a group. I made all the app icons hands, to go with my theme, and made them in a very simplified version of my style.
+                        Then I prototyped it all in Figma. You can look through it yourself <a href="https://www.figma.com/proto/VLUobMm4S9feJyoMgAOzPW/on-humanity-app?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down">here.</a>
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/icons.png">
+                    <img class="tempimg2" src="images/onhumanity/mkpapp.png">
+                    <img class="tempimg2" src="images/onhumanity/figmascreenshot.png">
 
-                <h3>Plushie</h3>
-                <p>
-                    The next item I made was a plushie. A cute collectible item based on a true story, to teach and to cuddle. The story I 
-                    chose to showcase was abot Laika, the space dog. She was the first living creature to orbit the Earth, but because of our 
-                    pride and negligence she died a painful death alone in space. </p>
-                <p>
-                    To start I modelled her in Blender. It was tough to capture her likeness, especially with limited photos. The next step 
-                    was to put her into Plushify, a free website for making plushie patterns. I sized her properly,  drew seams, labelled all 
-                    the pieces, and printed out the pattern. Thus began the extremely long process of crafting a plushie. She was too small 
-                    to use a sewing machine, so I stitched everything by hand. Then I added stuffing, attached her eyes and a few surface 
-                    decorations, and she was done!! She's a little wonky but i love her.</p>
-                <p>
-                    For her packaging, I made a tray type box with her story written on the bottom. I designed the cut for her box, but it 
-                    didn't turn out as straight as i wanted because of time constraints. 
-                </p>
-                <img class="tempimg2" src="images/onhumanity/laikamockup.png">
-                <img class="tempimg2" src="images/onhumanity/laikapatternwip.png">
-                <img class="tempimg2" src="images/onhumanity/laikabox.png">
-                <img class="tempimg2" src="images/onhumanity/displaylaika.png">
+                    <h3>Plushie</h3>
+                    <p>
+                        The next item I made was a plushie. A cute collectible item based on a true story, to teach and to cuddle. The story I 
+                        chose to showcase was abot Laika, the space dog. She was the first living creature to orbit the Earth, but because of our 
+                        pride and negligence she died a painful death alone in space. </p>
+                    <p>
+                        To start I modelled her in Blender. It was tough to capture her likeness, especially with limited photos. The next step 
+                        was to put her into Plushify, a free website for making plushie patterns. I sized her properly,  drew seams, labelled all 
+                        the pieces, and printed out the pattern. Thus began the extremely long process of crafting a plushie. She was too small 
+                        to use a sewing machine, so I stitched everything by hand. Then I added stuffing, attached her eyes and a few surface 
+                        decorations, and she was done!! She's a little wonky but i love her.</p>
+                    <p>
+                        For her packaging, I made a tray type box with her story written on the bottom. I designed the cut for her box, but it 
+                        didn't turn out as straight as i wanted because of time constraints. 
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/laikamockup.png">
+                    <img class="tempimg2" src="images/onhumanity/laikapatternwip.png">
+                    <img class="tempimg2" src="images/onhumanity/laikabox.png">
+                    <img class="tempimg2" src="images/onhumanity/displaylaika.png">
 
-                <h3>Sweater</h3>
-                <p>
-                    Another item i made was a sweater, to spark conversation and spread the message. I used my outlines-only artstyle 
-                    and included a quote to inspire viewers. I sent it off to print with sublimation printing and it turned out great.
-                </p>
-                <img class="tempimg2" src="images/onhumanity/shirtdesign.png">
-                <img class="tempimg2" src="images/onhumanity/displaysweater.jpg">
+                    <h3>Sweater</h3>
+                    <p>
+                        Another item i made was a sweater, to spark conversation and spread the message. I used my outlines-only artstyle 
+                        and included a quote to inspire viewers. I sent it off to print with sublimation printing and it turned out great.
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/shirtdesign.png">
+                    <img class="tempimg2" src="images/onhumanity/displaysweater.jpg">
 
-                <h3>Another crisis?!</h3>
-                <p>
-                    My final major item gave me some trouble. Originally I wanted to make a video game, because I can and it's fun. I wanted 
-                    to make a game about a true story, where someone does something evil and you have to decide if they're guilty or not, 
-                    based on the situation, context, and their background. I found a perfect story and researched it, but I felt like it was 
-                    unethical of me to use this story without consulting the victims' or criminals' families. It felt like true crime, and 
-                    although I wasn't profitting off of this story, I decided against it. </p>
-                <p>
-                    So this left me with a big hole instead of a 5th item. I thought about it for like half the semester. I didn't want to 
-                    do anything to make this topic too silly or too commercial. I wanted my project to be educational and helpful. Then I 
-                    thought about the original message of my project: to be the good you want to see in the world. So i had an epiphany:
-                    make a fundraiser!! In the end it doesn't really matter if humans are good or evil, what matters is what we an do to make 
-                    this world better ourselves. This whole topic would be useless philosophy if there wasn't a positive change. I researched 
-                    a few humanitarian organizations, and decided on Doctors Without Borders. They are independent, focused on helping anyone 
-                    who needs it, and well-known enough to be trusted. So I made this fundraising poster with a QR code to donate. 
-                </p>
-                <img class="tempimg2" src="images/onhumanity/fundraiser.png">
-                <img class="tempimg2" src="images/onhumanity/displayfundraiser.jpg">
+                    <h3>Another crisis?!</h3>
+                    <p>
+                        My final major item gave me some trouble. Originally I wanted to make a video game, because I can and it's fun. I wanted 
+                        to make a game about a true story, where someone does something evil and you have to decide if they're guilty or not, 
+                        based on the situation, context, and their background. I found a perfect story and researched it, but I felt like it was 
+                        unethical of me to use this story without consulting the victims' or criminals' families. It felt like true crime, and 
+                        although I wasn't profitting off of this story, I decided against it. </p>
+                    <p>
+                        So this left me with a big hole instead of a 5th item. I thought about it for like half the semester. I didn't want to 
+                        do anything to make this topic too silly or too commercial. I wanted my project to be educational and helpful. Then I 
+                        thought about the original message of my project: to be the good you want to see in the world. So i had an epiphany:
+                        make a fundraiser!! In the end it doesn't really matter if humans are good or evil, what matters is what we an do to make 
+                        this world better ourselves. This whole topic would be useless philosophy if there wasn't a positive change. I researched 
+                        a few humanitarian organizations, and decided on Doctors Without Borders. They are independent, focused on helping anyone 
+                        who needs it, and well-known enough to be trusted. So I made this fundraising poster with a QR code to donate. 
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/fundraiser.png">
+                    <img class="tempimg2" src="images/onhumanity/displayfundraiser.jpg">
 
-                <h3>Stickers</h3>
-                <p>
-                    Finally, i had to make 2 small promo items. For my first one i decided to make stickers! I used the stars included everywhere 
-                    in my project with different combos of my color palette, printed 200 of them, and learned how to use a cricut.
-                </p>
-                <img class="tempimg2" src="images/onhumanity/stickers.png">
-                <img class="tempimg2" src="images/onhumanity/stickerswip.jpg">
+                    <h3>Stickers</h3>
+                    <p>
+                        Finally, i had to make 2 small promo items. For my first one i decided to make stickers! I used the stars included everywhere 
+                        in my project with different combos of my color palette, printed 200 of them, and learned how to use a cricut.
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/stickers.png">
+                    <img class="tempimg2" src="images/onhumanity/stickerswip.jpg">
 
 
-                <h3>Bookmarks</h3>
-                <p>
-                    My second promo item was holographic bookmarks. I originally wanted to make a holographic poster, and did a lot of research 
-                    on lenticular printing, but I found that making them yourself is really difficult and ordering them is really expensive. So 
-                    i compromised, by making bookmarks, which weren't so expensive because they were small. I found another quote, similar to my 
-                    sweater design, about how we all have a choice between good and evil, and used it on the bookmark. </p>
-                <p>
-                    For the bookmark illustration I wanted to make something really conceptual, to represent the idea of choosing good or evil, 
-                    and how it's in our hands (haha). To symbolize good, i drew an orange, which is meant to be peeled and shared. To symbolize 
-                    evil, I drew a grenade for obvious reasons. The hard part of this was finding a position for the hands that could hold 
-                    both an orange and a grenade. I ended up with this layout, put everything together, and sent it off to Walgreens to print. </p>
-                <p>    
-                    To be honest, I had no faith in Walgreens, I was sure they would come out horribly. My backup plan was to use the same 
-                    design, but put it on double-sided paper. But Walgreens came through! They looked amazing! </p>
-                <p>
-                    Finishing these bookmarks was a very experimental process. I had to cut them in half, which i managed to do with an exacto 
-                    knife. Then i had to sand the edges and round the corners. Then I had to poke a hole in the top for a ribbon. I did this 
-                    with the help of the woodshop and drill press. Thanks steven!! Then i made these labels for the back of them with my 
-                    portfolio in case anyone who picked one up wanted to find me again in the future. Finally, I colored the edges with a paint 
-                    marker and attached a ribbon to all of them. Phew!!
-                </p>
-                <img class="tempimg2" src="images/onhumanity/meme.jpg">
-                <img class="tempimg2" src="images/onhumanity/bookmarksketch.jpg">
-                <img class="tempimg2" src="images/onhumanity/walgreens.png">
-                <img class="tempimg2" src="images/onhumanity/arrived.jpg">
-                <img class="tempimg2" src="images/onhumanity/bookmarklabel.png">
-                <img class="tempimg2" src="images/onhumanity/bookmarkfinal.jpg">
+                    <h3>Bookmarks</h3>
+                    <p>
+                        My second promo item was holographic bookmarks. I originally wanted to make a holographic poster, and did a lot of research 
+                        on lenticular printing, but I found that making them yourself is really difficult and ordering them is really expensive. So 
+                        i compromised, by making bookmarks, which weren't so expensive because they were small. I found another quote, similar to my 
+                        sweater design, about how we all have a choice between good and evil, and used it on the bookmark. </p>
+                    <p>
+                        For the bookmark illustration I wanted to make something really conceptual, to represent the idea of choosing good or evil, 
+                        and how it's in our hands (haha). To symbolize good, i drew an orange, which is meant to be peeled and shared. To symbolize 
+                        evil, I drew a grenade for obvious reasons. The hard part of this was finding a position for the hands that could hold 
+                        both an orange and a grenade. I ended up with this layout, put everything together, and sent it off to Walgreens to print. </p>
+                    <p>    
+                        To be honest, I had no faith in Walgreens, I was sure they would come out horribly. My backup plan was to use the same 
+                        design, but put it on double-sided paper. But Walgreens came through! They looked amazing! </p>
+                    <p>
+                        Finishing these bookmarks was a very experimental process. I had to cut them in half, which i managed to do with an exacto 
+                        knife. Then i had to sand the edges and round the corners. Then I had to poke a hole in the top for a ribbon. I did this 
+                        with the help of the woodshop and drill press. Thanks steven!! Then i made these labels for the back of them with my 
+                        portfolio in case anyone who picked one up wanted to find me again in the future. Finally, I colored the edges with a paint 
+                        marker and attached a ribbon to all of them. Phew!!
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/meme.jpg">
+                    <img class="tempimg2" src="images/onhumanity/bookmarksketch.jpg">
+                    <img class="tempimg2" src="images/onhumanity/walgreens.png">
+                    <img class="tempimg2" src="images/onhumanity/arrived.jpg">
+                    <img class="tempimg2" src="images/onhumanity/bookmarklabel.png">
+                    <img class="tempimg2" src="images/onhumanity/bookmarkfinal.jpg">
                
-                <h3>Schematic</h3>
-                <p>
-                    Last but not least, I had to arrange all the pieces of my project in my display, about 3ft wide and 8ft tall. I made a 
-                    schematic in illustrator, and then again in blender, and then did a few more tweaks as I was arranging everything. I 
-                    colored my schematic as well to try to balance the colors. 
+                    <h3>Schematic</h3>
+                    <p>
+                        Last but not least, I had to arrange all the pieces of my project in my display, about 3ft wide and 8ft tall. I made a 
+                        schematic in illustrator, and then again in blender, and then did a few more tweaks as I was arranging everything. I 
+                        colored my schematic as well to try to balance the colors. 
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/schematic1.png">
+                    <img class="tempimg2" src="images/onhumanity/schematic2.jpg">
+                    <img class="tempimg2" src="images/onhumanity/schematic3.png">
+
+                    <h3>Production week!</h3>
+                    <p>
+                        I printed and bound my book, stuck a ton of things to foamcore, and finished my plushie. I printed some of the illustrated 
+                        spreads and the fundraiser to hang on the wall. I made a bunch of QR codes, quit my job, and made little signs for everything, 
+                        stuff like "Take some stickers!" and "Please pet the dog." I adjusted my layout a few times, hung some stars from the ceiling, 
+                        added a tablecloth and stuck it in place, and added some lights underneath the cloth. Etc etc etc etc. </p>
+                    <p>
+                        The gallery opened on Saturday, we celebrated with pizza and I was done!! I had a bit of a love/hate relationship with this 
+                        project throughout the semester, but I am proud of how it turned out. 
+                    </p>
+                    <img class="tempimg2" src="images/onhumanity/arrived.jpg">
+                    <img class="tempimg2" src="images/onhumanity/laikawip1.jpg">
+                    <img class="tempimg2" src="images/onhumanity/bookwip.jpg">
+                    <img class="tempimg2" src="images/onhumanity/displaybookmarks.png">
+                    <img class="tempimg2" src="images/onhumanity/displaybook2.png">
+                    <img class="tempimg2" src="images/onhumanity/signswip.jpg">
+                    <img class="tempimg2" src="images/onhumanity/displaystickers.png">
+                </div>
+            </section>
+
+            <section id="final">
+                <h2>Final</h2>
+
+                <div class="finalpdf">
+                    <iframe src="https://online.fliphtml5.com/iygvg/huyx/" ></iframe>
+                </div>
+                <div class="finalpdf">
+                    <iframe src="https://online.fliphtml5.com/iygvg/dmcl/" ></iframe>
+                </div>
+
+                <p class="backbutton">
+                    <a href="index.html"> &#60; Back to portfolio </a>
                 </p>
-                <img class="tempimg2" src="images/onhumanity/schematic1.png">
-                <img class="tempimg2" src="images/onhumanity/schematic2.jpg">
-                <img class="tempimg2" src="images/onhumanity/schematic3.png">
-
-                <h3>Production week!</h3>
-                <p>
-                    I printed and bound my book, stuck a ton of things to foamcore, and finished my plushie. I printed some of the illustrated 
-                    spreads and the fundraiser to hang on the wall. I made a bunch of QR codes, quit my job, and made little signs for everything, 
-                    stuff like "Take some stickers!" and "Please pet the dog." I adjusted my layout a few times, hung some stars from the ceiling, 
-                    added a tablecloth and stuck it in place, and added some lights underneath the cloth. Etc etc etc etc. </p>
-                <p>
-                    The gallery opened on Saturday, we celebrated with pizza and I was done!! I had a bit of a love/hate relationship with this 
-                    project throughout the semester, but I am proud of how it turned out. 
-                </p>
-                <img class="tempimg2" src="images/onhumanity/arrived.jpg">
-                <img class="tempimg2" src="images/onhumanity/laikawip1.jpg">
-                <img class="tempimg2" src="images/onhumanity/bookwip.jpg">
-                <img class="tempimg2" src="images/onhumanity/displaybookmarks.png">
-                <img class="tempimg2" src="images/onhumanity/displaybook2.png">
-                <img class="tempimg2" src="images/onhumanity/signswip.jpg">
-                <img class="tempimg2" src="images/onhumanity/displaystickers.png">
-
-            </div>
-
-            <div id="contactpage" class="page"></div>
-            <h2>Final</h2>
-
-            <div class="finalpdf">
-                <iframe src="https://online.fliphtml5.com/iygvg/huyx/" ></iframe>
-            </div>
-            <div class="finalpdf">
-                <iframe src="https://online.fliphtml5.com/iygvg/dmcl/" ></iframe>
-            </div>
-
-            <p class="backbutton">
-                <a href="index.html"> &#60; Back to portfolio </a>
-            </p>
-            
+            </section>
+        </main>            
         <script src="indexscript.js"></script>
-
     </body>
 </html>
