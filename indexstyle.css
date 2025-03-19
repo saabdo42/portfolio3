@@ -438,9 +438,13 @@ nav li.current a{
     #aboutlinks a img{
         margin: unset;
     }
-    .halfgrid li{
-        flex-basis: 100%; /* not a flex anymore*/
+    .halfgrid{
+        grid-template: 1fr / 1fr;
     }
+    .brickgrid{
+        grid-template: clamp( 50px, 180px, 90vw) / 1fr;
+    }
+    .brickgrid li{ grid-area: unset; }
     .drop{
         padding:0;
         width:100%;
