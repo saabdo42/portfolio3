@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     </head>
 
-    <body onload="mobilehidenav()" onscroll="highlightsection(), logoswitcher()"> 
+    <body onload="settingvariables(), mobilehidenav()" onscroll="highlightsection(), logoswitcher()"> 
         
         <header>
             <img src="images/logogreen.png" id="logo"> 
@@ -24,7 +24,7 @@
         <div id="close" class="invis" onclick="closedrop()">&times;</div>
         <div id="dimmer2" class="invis" onclick="closedrop()"></div>
 
-        <img id="burger" src="images/burger.png" onclick="burger()">
+        <img id="burger" class="invis" src="images/burger.png" onclick="burger()">
 
         <nav class="invis"> 
             <ul>
@@ -104,57 +104,57 @@
                 <ul class="halfgrid">
                     <li>
                         <img src="images/gloriathm.png">
-                        <div class="artthmtitle" onclick="opendesc(this)">Gloria<br>Book Festival</div>
+                        <div class="artthmtitle" onclick="openproject(this)">Gloria<br>Book Festival</div>
                     </li>
                     <li>
                         <img src="images/pantrythm.png">
-                        <div class="artthmtitle" onclick="opendesc(this)">The Pantry<br>Gift Shop</div>
+                        <div class="artthmtitle" onclick="openproject(this)">The Pantry<br>Gift Shop</div>
                     </li>
                     <li>
                         <img src="images/azlthm.png">
-                        <div class="artthmtitle" onclick="opendesc(this)">Azalea<br>Coffee Shop</div>
+                        <div class="artthmtitle" onclick="openproject(this)">Azalea<br>Coffee Shop</div>
                     </li>
                     <li>
                         <img src="images/luxthm.png">
-                        <div class="artthmtitle" onclick="opendesc(this)">Lux<br>Holiday Campaign</div>
+                        <div class="artthmtitle" onclick="openproject(this)">Lux<br>Holiday Campaign</div>
                     </li>
                 </ul>
                 <h3>Everything else!</h3>
                 <ul class="brickgrid">
                     <li class="a1">
                         <img src="images/raven2.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">The Raven Cycle<br>Series Covers</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">The Raven Cycle<br>Series Covers</div>
                     </li>
                     <li class="a2">
                         <img src="images/carrot mockup.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Carrot Myth<br>Posters</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">Carrot Myth<br>Posters</div>
                     </li>
                     <li class="a3">
                         <img src="images/ORBIT2.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Orbit<br>Magazine</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">Orbit<br>Magazine</div>
                     </li>
                     <li class="b1"><img src="images/pisanothm.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Pisano Tales<br>Field Guide</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">Pisano Tales<br>Field Guide</div>
                     </li>
                     <li class="b2">
                         <img src="images/spark1.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)" >SPARK<br>Space Travel</div>
+                        <div class="artthmtitle"  onclick="openproject(this)" >SPARK<br>Space Travel</div>
                     </li>
                     <li class="b3">
                         <img src="images/manifestothm.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Design Manifesto<br>Website</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">Design Manifesto<br>Website</div>
                     </li>
                     <li class="b4">
                         <img src="images/pyramid.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Great Pyramid<br>Animated Poster</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">Great Pyramid<br>Animated Poster</div>
                     </li>
                     <li class="c1">
                         <img src="images/mona lise.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Six Word Story<br>Animation</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">Six Word Story<br>Animation</div>
                     </li>   
                     <li class="c2">
                         <img src="images/musroomspec2.png">
-                        <div class="artthmtitle"  onclick="opendesc(this)">Musroom<br>Font</div>
+                        <div class="artthmtitle"  onclick="openproject(this)">Musroom<br>Font</div>
                     </li>
                     <li class="c3">
                     </li>
@@ -176,18 +176,18 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/gloriathm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/gloriaposter.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/gloriabands.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/gloria2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/gloriainsta.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/gloriasign.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/gloriathm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/gloriaposter.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/gloriabands.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/gloria2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/gloriainsta.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/gloriasign.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <div class="window vis">
+                        <div class="window invis">
                             <iframe src="https://online.fliphtml5.com/iygvg/tpmq/" class="pdf" ></iframe>
                         </div>
-                        <img loading="lazy" src="images/gloriathm.png" class="bigimg invis">
+                        <img src="images/gloriathm.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Gloria</h3>
@@ -203,18 +203,18 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/pantrythm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pantryshirts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pantrygifts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pantrygifts2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pantrymural.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pantrypkg.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pantrythm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pantryshirts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pantrygifts.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pantrygifts2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pantrymural.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pantrypkg.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <div class="window vis">
+                        <div class="window invis">
                             <iframe src="https://online.fliphtml5.com/iygvg/rlxe/" class="pdf"></iframe>
                         </div>
-                        <img loading="lazy" src="images/pantrythm.png" class="bigimg invis">
+                        <img src="images/pantrythm.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>The Pantry</h3>
@@ -228,18 +228,18 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/azlthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/azlbags.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/azlcup.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/azlcards.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/azlmenu.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/azlmugs.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/azlthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/azlbags.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/azlcup.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/azlcards.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/azlmenu.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/azlmugs.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <div class="window vis">
+                        <div class="window invis">
                             <iframe src="https://online.fliphtml5.com/iygvg/lacq/" class="pdf" ></iframe>
                         </div>
-                        <img loading="lazy" src="images/lythm.png" class="bigimg invis">
+                        <img src="images/lythm.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Azalea</h3>
@@ -254,18 +254,18 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/luxm1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/luxads.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/luxemail.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/luxgiftcard.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/luxpackage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/luxpage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/luxm1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/luxads.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/luxemail.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/luxgiftcard.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/luxpackage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/luxpage.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <div class="window vis">
+                        <div class="window invis">
                             <iframe src="https://online.fliphtml5.com/iygvg/sebp/" class="pdf" ></iframe>
                         </div>
-                        <img loading="lazy" src="images/luxemail.png" class="bigimg invis">
+                        <img src="images/luxemail.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Lux</h3>
@@ -280,13 +280,13 @@
             <article class="drop invis">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/raven3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/raven2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/raven1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/ravencurrent.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/raven3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/raven2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/raven1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/ravencurrent.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img loading="lazy" src="images/raven3.png" class="bigimg vis">
+                        <img src="images/raven3.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>The Raven Cycle</h3>
@@ -302,15 +302,15 @@
             <article class="drop invis">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/carrot1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/carrot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/carrot3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/carrot research.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/carrot sketch2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/carrot sketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/carrot1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/carrot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/carrot3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/carrot research.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/carrot sketch2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/carrot sketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img loading="lazy" src="images/carrot1.png" class="bigimg vis">
+                        <img src="images/carrot1.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Carrots</h3>
@@ -325,15 +325,15 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/orbitthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/ORBIT3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/ORBIT2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/orbitthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/ORBIT3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/ORBIT2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <div class="window vis">
+                        <div class="window invis">
                             <iframe src="https://online.fliphtml5.com/iygvg/ecni/" class="pdf" ></iframe>
                         </div>
-                        <img loading="lazy" src="images/ORBIT2.png" class="bigimg invis">
+                        <img src="images/ORBIT2.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Orbit Magazine</h3>
@@ -347,16 +347,16 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/pisanothm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pisano1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pisano2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/pisano3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pisanothm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pisano1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pisano2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pisano3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <div class="window vis">
+                        <div class="window invis">
                             <iframe src="https://online.fliphtml5.com/iygvg/dbkb/" class="pdf"></iframe>
                         </div>
-                        <img loading="lazy" src="images/bbsketch.png" class="bigimg invis">
+                        <img src="images/bbsketch.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Pisano Tales</h3>
@@ -371,12 +371,12 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/spark1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/spark2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/spark1.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/spark2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img loading="lazy" src="images/spark1.png" class="bigimg invis">
-                        <video width="100%" controls="true" class="window vis">
+                        <img src="images/spark1.png" class="bigimg invis">
+                        <video width="100%" controls="true" class="window invis">
                             <source src="images/sparkvideo.mp4" type="video/mp4">Video not found
                         </video>
                     </figure>
@@ -395,12 +395,12 @@
             <article class="drop invis">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img loading="lazy" src="images/manifestoscreenshot.png" class="bigimg vis">
+                        <img src="images/manifestoscreenshot.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Design Manifesto</h3>
@@ -417,14 +417,14 @@
             <article class="drop invis">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/pyramid.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/Psun.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/Pwheat.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/Priver.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/Punderworld.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/pyramid.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/Psun.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/Pwheat.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/Priver.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/Punderworld.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img loading="lazy" src="images/pyramid.png" class="bigimg vis">
+                        <img src="images/pyramid.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>The Great Pyramid of Giza</h3>
@@ -439,11 +439,11 @@
             <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/mona lise.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/mona lise.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img loading="lazy" src="images/mona lise.png" class="bigimg invis">
-                        <video width="100%" controls="true" class="window vis">
+                        <img src="images/mona lise.png" class="bigimg invis">
+                        <video width="100%" controls="true" class="window invis">
                             <source src="images/monalisavideo.mp4" type="video/mp4">Video not found
                         </video>
                     </figure>
@@ -459,13 +459,13 @@
             <article class="drop invis">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img loading="lazy" src="images/musroomspec2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/musroomspec1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/musroomgif.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img loading="lazy" src="images/musroomsketch1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/musroomspec2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/musroomspec1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/musroomgif.gif" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/musroomsketch1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img loading="lazy" src="images/musroomspec2.png" class="bigimg vis">
+                        <img src="images/musroomspec2.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
                         <h3>Musroom</h3>
