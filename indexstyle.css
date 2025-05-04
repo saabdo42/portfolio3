@@ -180,10 +180,35 @@ nav li a:hover{
 }
 nav li.current a{
     font-weight: bolder;
-    color: var(--blossom);
+    color: black;
 }
 
 /*ABOUT*/
+.linkbuttons{
+    border: 2px solid #96cc725c;
+    border-radius: 50px;
+    padding: .6rem 1rem;
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    width: fit-content;
+}
+.linkbuttons svg{
+    height: 1.5rem;
+    fill: var(--sprout);
+}
+.linkbuttons:hover{
+    border: 2px solid var(--sprout);
+    cursor: pointer;
+    font-weight: unset;
+    transition: .5s;
+}
+.linkbuttons:hover svg{
+    fill:black;
+    transition: .5s;
+}
+
 #medesc{
     display: flex;
     align-items: flex-start;
@@ -229,24 +254,6 @@ nav li.current a{
     justify-content: start;
     margin-left: -.5vw;
     gap: 2vw;
-}
-#aboutlinks a{
-    border: none;
-    font-size: unset;
-    background-color: white;
-    line-height: clamp(10px, 30px, 12vw);
-    cursor: pointer;
-    padding: .5vw;
-    text-wrap: nowrap;
-}
-#aboutlinks a img{
-    margin: 0 !important;
-    float: left;
-    padding-right: clamp(4px, 1.1vw, 20px);
-}
-#aboutlinks a:hover{
-    color: var(--sprout);
-    font-weight: unset;
 }
 
 /*ART*/
@@ -379,9 +386,6 @@ nav li.current a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.desctext a{
-    color:var(--blossom);
 }
 #dimmer2{
     background-color: black;

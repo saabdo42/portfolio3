@@ -63,16 +63,16 @@
                         </p>
         
                         <div id="aboutlinks">
-                            <a href="resume.pdf"> 
-                                <img src="images/iconS.png">
+                            <a href="resume.pdf" class="linkbuttons">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0h-14v24h20v-18l-6-6zm0 3l3 3h-3v-3zm-12 19v-20h10v6h6v14h-16z"/></svg>
                                 My resume
                             </a>
-                            <a href="https://www.instagram.com/sara.abdo.design/"> 
-                                <img src="images/iconinsta.png">
+                            <a href="https://www.instagram.com/sara.abdo.design/" class="linkbuttons"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 My Instagram
                             </a>
-                            <a href="https://vimeo.com/saraabdo"> 
-                                <img src="images/iconvim.png">
+                            <a href="https://vimeo.com/saraabdo" class="linkbuttons"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/></svg>
                                 My Vimeo
                             </a>
                         </div> 
@@ -122,8 +122,8 @@
                 <h3>Everything else!</h3>
                 <ul class="brickgrid">
                     <li class="a1">
-                        <img src="images/raven2.png">
-                        <div class="artthmtitle"  onclick="openproject(this)">The Raven Cycle<br>Series Covers</div>
+                        <img src="images/chefthm.png">
+                        <div class="artthmtitle" onclick="openproject(this)">The Static Chef<br>Recipe site</div>
                     </li>
                     <li class="a2">
                         <img src="images/carrot mockup.png">
@@ -141,8 +141,8 @@
                         <div class="artthmtitle"  onclick="openproject(this)" >SPARK<br>Space Travel</div>
                     </li>
                     <li class="b3">
-                        <img src="images/manifestothm.png">
-                        <div class="artthmtitle"  onclick="openproject(this)">Design Manifesto<br>Website</div>
+                        <img src="images/raven2.png">
+                        <div class="artthmtitle"  onclick="openproject(this)">The Raven Cycle<br>Series Covers</div>
                     </li>
                     <li class="b4">
                         <img src="images/pyramid.png">
@@ -157,6 +157,8 @@
                         <div class="artthmtitle"  onclick="openproject(this)">Musroom<br>Font</div>
                     </li>
                     <li class="c3">
+                        <img src="images/manifestothm.png">
+                        <div class="artthmtitle"  onclick="openproject(this)">Design Manifesto<br>Website</div>
                     </li>
                 </ul>
 
@@ -277,24 +279,32 @@
                 </div>
             </article>
 
-            <article class="drop invis">
+            <article class="drop invis haspdf">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img src="images/raven3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img src="images/raven2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img src="images/raven1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img src="images/ravencurrent.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/chefthm.png" class="descimg pdfthm" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/chef1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/chef2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/chef3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img src="images/raven3.png" class="bigimg invis">
+                        <img src="images/chefthm.png" class="bigimg invis">
+                        <video width="100%" controls="true" class="window invis">
+                            <source src="images/chefvideo.mp4" type="video/mp4">Video not found
+                        </video>
                     </figure>
                     <div class="desctext">
-                        <h3>The Raven Cycle</h3>
-                        <p>February 2022 <br>
-                            A series of 4 book covers I made for Maggie Stiefvater's series <i>The Raven Cycle</i>. I felt like their current covers (shown in the last image) 
-                            didn't properly convey the storytelling and magical feeling of this series. I combined mystical and natural elements of the story in bold 
-                            illustrations. Made in Photoshop and InDesign.
+                        <h3>The Static Chef</h3>
+                        <p>April 2025<br>
+                            Branding and a website for a recipe website! I was sick and tired of scrolling back and forth from ingredients 
+                            to directions, so I created a prototype for a website that displays both at once with separately scrolling containers. 
+                            I built the brand around that concept, and included lots of copywriting and transition animations. It also passes 
+                            WCAG standards. Made in Illustrator and Figma.
                         </p>
+                        <a class="linkbuttons" href="https://www.figma.com/proto/6EdwRiOnU22Ud74kG5jjKO/Recipe-Site---desktop?scaling=scale-down&content-scaling=fixed">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
+                            View prototype
+                        </a>
                     </div>
                 </div>
             </article>
@@ -383,11 +393,14 @@
                     <div class="desctext">
                         <h3>SPARK</h3>
                         <p>April 2023<br>
-                            A space travel brand and website that wants to spark a passion for science. 
-                            You can view the Figma prototype <a href="https://www.figma.com/proto/Y7FN5pj4pz51M5mTzjzZvW/SPARK?scaling=scale-down&node-id=12-2&starting-point-node-id=12%3A2">here.</a> 
-                            Usually, space-themed designs are dark, with emphasis on sleekness and speed, but I designed this brand light and friendly. I used + and &times; for stars, as a wink at the educational theme. 
-                            Made in Illustrator and Figma.
+                            A space travel brand and website that wants to spark a passion for science. Usually, space-themed designs are dark, 
+                            with emphasis on sleekness and speed, but I designed this brand light and friendly. I used + and &times; for stars, 
+                            as a wink at the educational theme. Made in Illustrator and Figma.
                         </p>
+                        <a class="linkbuttons" href="https://www.figma.com/proto/Y7FN5pj4pz51M5mTzjzZvW/SPARK?scaling=scale-down&content-scaling=fixed">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
+                            View prototype
+                        </a>
                     </div>
                 </div>                
             </article>
@@ -395,20 +408,20 @@
             <article class="drop invis">
                 <div class="dropcontent">
                     <div class="moreimg">
-                        <img src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
-                        <img src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/raven3.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/raven2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/raven1.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/ravencurrent.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
                     </div>
                     <figure class="bigimgholder">
-                        <img src="images/manifestoscreenshot.png" class="bigimg invis">
+                        <img src="images/raven3.png" class="bigimg invis">
                     </figure>
                     <div class="desctext">
-                        <h3>Design Manifesto</h3>
-                        <p>December 2021<br>
-                            An interactive website representing my design process and “manifesto.” You can visit it <a href="https://saabdo42.github.io/design-manifesto/">here. </a>
-                            This was my first time doing web design, so I did tons of research. I had to make a few compromises but managed to make a 
-                            website I'm proud of. Made from scratch in VS code and hosted on Github. <br>
-                            I recently updated it and cleaned the code a LOT with what I've learned about web design.
+                        <h3>The Raven Cycle</h3>
+                        <p>February 2022 <br>
+                            A series of 4 book covers I made for Maggie Stiefvater's series <i>The Raven Cycle</i>. I felt like their current covers (shown in the last image) 
+                            didn't properly convey the storytelling and magical feeling of this series. I combined mystical and natural elements of the story in bold 
+                            illustrations. Made in Photoshop and InDesign.
                         </p>
                     </div>
                 </div>
@@ -472,6 +485,32 @@
                         <p>April 2021<br>
                             A font. I experimented with inktraps and learned more about type anatomy and type specimens.
                         </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drop invis">
+                <div class="dropcontent">
+                    <div class="moreimg">
+                        <img src="images/manifestoscreenshot.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/manifestoscreenshot2.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                        <img src="images/designmanifestosketch.png" class="descimg" onmouseover="enlarge(this)" onclick="enlarge(this)">
+                    </div>
+                    <figure class="bigimgholder">
+                        <img src="images/manifestoscreenshot.png" class="bigimg invis">
+                    </figure>
+                    <div class="desctext">
+                        <h3>Design Manifesto</h3>
+                        <p>December 2021<br>
+                            An interactive website representing my design process and “manifesto.” This was my first time doing web design, 
+                            so I did tons of research. I had to make a few compromises but managed to make a website I'm proud of. 
+                            Made from scratch in VS code and hosted on Github. <br>
+                            I recently updated it and cleaned the code a LOT with what I've learned about web design.
+                        </p>
+                        <a class="linkbuttons" href="https://saabdo42.github.io/design-manifesto/">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
+                            Visit site
+                        </a>
                     </div>
                 </div>
             </article>
